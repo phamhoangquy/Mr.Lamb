@@ -1,0 +1,199 @@
+.block-title
+	padding-bottom: 30px
+	.head-title
+		h1
+			font-size: 36px
+			color: #111111
+			text-align: center
+			text-transform: uppercase
+			font-weight: 700
+			@media screen and ( max-width: 576px )
+				font-size: 24px
+	.head-title
+		h2
+			font-size: 30px
+			color: #111111
+			text-align: center
+			font-weight: 700
+			@media screen and ( max-width: 576px )
+				font-size: 24px
+	.head-title-zone
+		h2
+			font-size: 30px
+			color: #111111
+			text-align: center
+			font-weight: 700
+			@media screen and ( max-width: 576px )
+				font-size: 24px
+	.title-zone
+		h2
+			font-size: 18px
+			color: #111111
+			text-align: center
+			font-weight: 700
+			text-transform: uppercase
+			@media screen and ( max-width: 576px )
+				font-size: 24px
+
+
+.head-menu
+	display: flex
+	align-items: center
+	justify-content: center
+	border-bottom: 1px solid #e0e0e0
+	padding-top: 20px
+	background: #fff
+	@media screen and ( max-width:  1024.98px)
+		overflow-x: auto
+		justify-content: flex-start
+		padding-left: 20px
+		padding-right: 20px
+		
+	ul 
+		list-style: none
+		padding: 0
+		display: flex
+		@media screen and ( max-width:  1024.98px)
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			white-space: nowrap
+			
+		li 
+			padding-right: 30px
+			padding-bottom: 20px
+			a 
+				font-size: 14px
+				font-weight: 500
+				&:hover
+					color: #ffffff
+					background: #c7931c
+					border-radius: 50px
+					padding: 10px
+		@media screen and ( max-width:576px)
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			li 
+				text-align: center
+
+.head-title-zone
+	padding-top: 30px
+	display: flex
+	justify-content: center
+	align-items: center
+	@media screen and ( max-width:  1024.98px)
+		padding-top: 0
+	.head-title 
+		margin-bottom: 30px
+		@media screen and ( max-width:  1024.98px)
+			margin-bottom: 0
+			padding-top: 0
+	.title
+		// margin-bottom: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		@media screen and ( max-width:  1024.98px)
+			margin-bottom: 30px
+			overflow-x: auto
+			justify-content: flex-start
+		ul
+			list-style-type: none
+			padding: 0
+			margin-left: -15px
+			@media screen and ( max-width:  1024.98px)
+				white-space: nowrap
+				display: flex 
+				justify-content: flex-start
+				align-items: center
+		li
+			display: inline-block
+			padding-left: 15px
+			border-radius: 20px
+			border: 1px solid #999999
+			padding: 5px 35px
+			background: #ffffff
+			+ li
+				// border-left: 1px solid #e0e0e0
+			@media screen and ( max-width:576px)
+				margin-top: 10px
+			&:not(:last-child)
+				margin-right: 10px
+			a
+				font-size: 14px
+				font-family: 'Montserrat', sans-serif
+			&.active,&:hover
+				background: #e92431
+				border: none
+				a
+					color: #ffffff
+					font-size: 14px
+			&:hover
+				background: #e92431
+				color: #ffffff
+				border: none
+				cursor: pointer
+				a
+					color: #ffffff
+
+.lcl
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+
+	&-1 
+		-webkit-line-clamp: 1
+
+	&-2 
+		-webkit-line-clamp: 2
+
+	&-3 
+		-webkit-line-clamp: 3
+
+	&-4
+		-webkit-line-clamp: 4
+
+.dekstop 
+	@media (max-width: 1025px) 
+		display: none !important
+
+.zoom-in
+	overflow: hidden
+	transition: .3s all ease-in-out
+	&:hover
+		img
+			transform: scale(1.13)
+	img
+		transform: scale(1)
+		transition: .3s all ease-in-out
+.opacity
+	transition: .3s all ease-in-out
+	&:hover
+		opacity: .7
+	img
+		opacity: 1
+		transition: .3s all ease-in-out
+.flash
+	transition: .3s all ease-in-out
+	&:hover
+		img
+			opacity: 1
+			animation: flash 1.5s
+
+@-webkit-keyframes flash
+	0%
+		opacity: .4
+
+	100%
+		opacity: 1
+
+
+@keyframes flash
+	0%
+		opacity: .4
+
+	100%
+		opacity: 1
+
