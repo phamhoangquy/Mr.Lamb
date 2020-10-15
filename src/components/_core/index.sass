@@ -65,11 +65,12 @@
 			a 
 				font-size: 14px
 				font-weight: 500
+				color: #333333
 				&:hover
 					color: #ffffff
-					background: #c7931c
+					background: #fbbf33
 					border-radius: 50px
-					padding: 10px
+					padding: 9px 25px
 		@media screen and ( max-width:576px)
 			display: flex
 			align-items: center
@@ -83,14 +84,14 @@
 	justify-content: center
 	align-items: center
 	@media screen and ( max-width:  1024.98px)
-		padding-top: 0
+		padding-top: 30px
 	.head-title 
 		margin-bottom: 30px
 		@media screen and ( max-width:  1024.98px)
 			margin-bottom: 0
 			padding-top: 0
 	.title
-		// margin-bottom: 40px
+		margin-bottom: 40px
 		display: flex
 		justify-content: center
 		align-items: center
@@ -107,35 +108,44 @@
 				display: flex 
 				justify-content: flex-start
 				align-items: center
+				
 		li
 			display: inline-block
 			padding-left: 15px
-			border-radius: 20px
-			border: 1px solid #999999
-			padding: 5px 35px
-			background: #ffffff
 			+ li
-				// border-left: 1px solid #e0e0e0
+				border-left: 1px solid #e0e0e0
 			@media screen and ( max-width:576px)
 				margin-top: 10px
 			&:not(:last-child)
 				margin-right: 10px
+			&.active
+				a
+					color: #fbbf33
+					// text-decoration: underline
 			a
-				font-size: 14px
-				font-family: 'Montserrat', sans-serif
-			&.active,&:hover
-				background: #e92431
-				border: none
+				font-weight: 600
+				color: #666
+				text-transform: uppercase
+				&:hover
+					color: #fbbf33
+
+.link-to-section
+	ul
+		list-style-type: none
+		padding: 0
+		li
+			display: inline-block
+			&:not(:last-child)
+				margin-right: 10px
+			&.active
 				a
-					color: #ffffff
-					font-size: 14px
-			&:hover
-				background: #e92431
-				color: #ffffff
-				border: none
-				cursor: pointer
-				a
-					color: #ffffff
+					color: #0b6528
+					text-decoration: underline
+			a
+				display: inline-block
+				padding: 10px 0
+				font-weight: 600
+				color: #333333
 
 .lcl
 	overflow: hidden
