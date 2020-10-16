@@ -1,6 +1,8 @@
 $(document).ready(function() {
     swiperInit();
     toggleSupport();
+    sideNavigation();
+    sideNavigation2();
 });
 
 // header
@@ -54,4 +56,56 @@ function swiperInit() {
             clickable: "true"
         }
     });
+    // Mega
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+}
+
+function sideNavigation() {
+    let trigger = $('.side-navigation-wrapper .side-navigation .title em');
+    let close = $('.side-navigation-wrapper .side-navigation  .nav-sub');
+    let parent = $('.side-navigation-wrapper .side-navigation  li');
+    trigger.on('click', function(e) {
+        e.preventDefault();
+        if (!$(this).parent().parent().hasClass("open")) {
+            close.slideUp();
+            $(this).parent().next().slideToggle();
+            parent.removeClass('open')
+            $(this).parents('li').addClass('open')
+        } else {
+            $(this).parent().next().slideToggle();
+            parent.removeClass('open')
+        }
+    })
+
+}
+
+function sideNavigation2() {
+    let trigger = $('.side-navigation-wrapper .side-navigation .title-2 em');
+    let close = $('.side-navigation-wrapper .side-navigation  .nav-sub-2');
+    let parent = $('.side-navigation-wrapper .side-navigation  li');
+    trigger.on('click', function(e) {
+        e.preventDefault();
+        if (!$(this).parent().parent().hasClass("open")) {
+            close.slideUp();
+            $(this).parent().next().slideToggle();
+            parent.removeClass('open')
+            $(this).parents('li').addClass('open')
+        } else {
+            $(this).parent().next().slideToggle();
+            parent.removeClass('open')
+        }
+    })
 }
