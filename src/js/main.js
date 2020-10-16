@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    swiperInit();
     toggleSupport();
 });
 
@@ -35,6 +36,22 @@ function toggleSupport() {
                 .next()
                 .slideToggle();
             $(".toggle-item").removeClass("active");
+        }
+    });
+}
+
+function swiperInit() {
+    var homerSwiper = new Swiper(".home-banner .swiper-container", {
+        // Optional parameters
+        speed: 1205,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000
+        },
+        pagination: {
+            el: ".home-banner-pagination",
+            type: "bullets",
+            clickable: "true"
         }
     });
 }
