@@ -16,6 +16,7 @@ header
 					display: none
 				.search
 					margin: 12px 0
+					display: flex
 					position: relative
 					@media screen and ( max-width: 1092px )
 						display: none
@@ -28,6 +29,10 @@ header
 							width: 150px
 						&:focus
 							outline: none
+					span
+						position: absolute
+						right: 0
+						top: 0
 			&:nth-child(2)
 				flex: 1
 				@media screen and ( max-width: 1092px )
@@ -58,6 +63,10 @@ header
 						font-size: 12px
 						top: 4px
 						left: -15px
+					a
+						color: #111111
+						font-size: 1rem
+						padding-left: 10px
 				.regist
 					margin-left: 20px
 					position: relative
@@ -68,8 +77,15 @@ header
 						position: absolute
 						top: -2px
 						left: -11px
+					a
+						color: #111111
+						font-size: 16px
+						// padding-left: 10px
 				.EN
 					margin-left: 20px
+					a
+						color: #111111
+						font-size: 1rem
 				.cart
 					margin-left: 20px
 					position: relative
