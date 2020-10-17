@@ -1,0 +1,122 @@
+.block_product
+	padding: 45px 0 30px 0
+	.block_title_product
+		width: 100%
+		height: 40px
+		background-color: #111111
+		display: flex
+		align-items: center
+		justify-content: center
+		.title_product
+			h2
+				font-family: "Montserrat-Medium"
+				font-size: 18px
+				color: #ffffff
+
+	.block_collapsible
+		background-color: #f9f9f9
+		padding: 0
+		list-style: none
+		.collapsible
+			padding: 15px 15px
+			color: #333333
+			text-transform: uppercase
+			font-family: "Montserrat-Bold"
+			background-color: transparent
+			cursor: pointer
+			width: 100%
+			border: none
+			outline: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 16px
+			&:hover
+				color: #00415f
+			&:hover:after
+				color: #00415f
+			&:after
+				content: '\f078'
+				font-family: 'Font Awesome 5 Pro'
+				font-weight: bold
+				font-size: 12px
+				color: #111111
+				float: right
+			@media screen and ( max-width: 1024px )
+				padding: 14px 20px
+			@media screen and ( max-width: 576px )
+				padding: 14px 20px
+		.active
+			color: #00415f
+			background-color: #fff
+			border-bottom: 1px solid #999999
+			border-top: 1px solid #999999
+		.active:after
+			content: "\f077"
+			color: #111111
+		.content
+			max-height: 0
+			overflow: hidden
+			transition: max-height 0.2s ease-out
+			li
+				padding: 15px
+				display: block
+				@media screen and ( max-width: 1024px )
+					padding: 4px 50px
+				@media screen and ( max-width: 576px )
+					padding: 2px 50px
+				a
+					font-size: 16px
+					color: #111111
+					cursor: pointer
+					&:hover
+						color: #00415f
+
+		.menu-2
+			color: #333333
+			background-color: transparent
+			cursor: pointer
+			width: 100%
+			border: none
+			outline: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 16px
+			&:hover
+				color: #00415f
+			&:hover:after
+				color: #00415f
+			&:after
+				content: '\f078'
+				font-family: 'Font Awesome 5 Pro'
+				font-weight: bold
+				font-size: 12px
+				color: #111111
+				float: right
+			@media screen and ( max-width: 1024px )
+				padding: 14px 20px
+			@media screen and ( max-width: 576px )
+				padding: 14px 20px
+		.active
+			color: #00415f
+		.active:after
+			content: "\f077"
+			color: #111111
+		.content_2
+			max-height: 0
+			overflow: hidden
+			transition: max-height 0.2s ease-out
+			li
+				padding: 5px 15px
+				display: block
+				@media screen and ( max-width: 1024px )
+					padding: 4px 50px
+				@media screen and ( max-width: 576px )
+					padding: 2px 50px
+				a
+					font-size: 16px
+					color: #111111
+					cursor: pointer
+					&:hover
+						color: #00415f

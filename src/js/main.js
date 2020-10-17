@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     swiperInit();
     toggleSupport();
     sideNavigation();
@@ -6,12 +6,12 @@ $(document).ready(function() {
 });
 
 // header
-$('.header_btn').click(function() {
+$('.header_btn').click(function () {
     $(this).toggleClass("click");
     $('.menu_mobile').toggleClass("show");
     $('.overlay').toggleClass("show");
 });
-$('.overlay').click(function() {
+$('.overlay').click(function () {
     $(this).toggleClass("click");
     $('.menu_mobile').toggleClass("show");
     $('.overlay').toggleClass("show");
@@ -19,7 +19,7 @@ $('.overlay').click(function() {
 
 // toggle support
 function toggleSupport() {
-    $(".toggle-item > .title").click(function(e) {
+    $(".toggle-item > .title").click(function (e) {
         e.preventDefault();
         if (!$(this)
             .parent()
@@ -57,17 +57,32 @@ function swiperInit() {
         }
     });
     // Mega
+    
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
     for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
+        coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.maxHeight = "500px";
+            }
+        });
+    }
+    var coll = document.getElementsByClassName("menu-2");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content_2 = this.nextElementSibling;
+            if (content_2.style.maxHeight) {
+                content_2.style.maxHeight = null;
+            } else {
+                content_2.style.maxHeight = "500px";
             }
         });
     }
@@ -77,7 +92,7 @@ function sideNavigation() {
     let trigger = $('.side-navigation-wrapper .side-navigation .title em');
     let close = $('.side-navigation-wrapper .side-navigation  .nav-sub');
     let parent = $('.side-navigation-wrapper .side-navigation  li');
-    trigger.on('click', function(e) {
+    trigger.on('click', function (e) {
         e.preventDefault();
         if (!$(this).parent().parent().hasClass("open")) {
             close.slideUp();
@@ -96,7 +111,7 @@ function sideNavigation2() {
     let trigger = $('.side-navigation-wrapper .side-navigation .title-2 em');
     let close = $('.side-navigation-wrapper .side-navigation  .nav-sub-2');
     let parent = $('.side-navigation-wrapper .side-navigation  li');
-    trigger.on('click', function(e) {
+    trigger.on('click', function (e) {
         e.preventDefault();
         if (!$(this).parent().parent().hasClass("open")) {
             close.slideUp();
