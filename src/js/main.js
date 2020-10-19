@@ -121,7 +121,42 @@ function swiperInit() {
         });
     });
     // End Product Home
-
+    var brandSwiper = new Swiper(".block_product-home-3 .swiper-container", {
+        // Optional parameters
+        speed: 1000,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2000,
+        },
+        navigation: {
+            nextEl: ".block_product-home-3 .nav-arrow-next",
+            prevEl: ".block_product-home-3 .nav-arrow-prev",
+        },
+        breakpointsInverse: true,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 3,
+            },
+            1600: {
+                slidesPerView: 3,
+            },
+        },
+    });
     var brandSwiper = new Swiper(".block_news-event .swiper-container", {
         // Optional parameters
         speed: 1000,
