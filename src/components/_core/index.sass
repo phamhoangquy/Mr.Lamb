@@ -41,7 +41,7 @@
 	display: flex
 	align-items: center
 	justify-content: center
-	border-bottom: 1px solid #e0e0e0
+	border: 1px solid #e0e0e0
 	padding-top: 20px
 	background: #fff
 	@media screen and ( max-width:  1024.98px)
@@ -67,7 +67,11 @@
 				font-size: 14px
 				font-weight: 500
 				color: #333333
-				&:hover
+			&:hover
+				a
+					color: #00415f
+			&.active
+				a
 					color: #00415f
 		@media screen and ( max-width:576px)
 			display: flex
@@ -106,12 +110,22 @@
 				display: flex 
 				justify-content: flex-start
 				align-items: center
+			li
+				&.active
+					a
+						color: #00415f
 				
 		li
 			display: inline-block
 			padding-left: 15px
+			&.active
+				a
+					color: #00415f
 			+ li
 				border-left: 1px solid #e0e0e0
+			&.active
+				a
+					color: #00415f
 			@media screen and ( max-width:576px)
 				margin-top: 10px
 			&:not(:last-child)
@@ -125,6 +139,11 @@
 				color: #666
 				font-size: 36px
 				&:hover
+					color: #00415f
+				&.active
+					color: #00415f
+			&.active
+				a
 					color: #00415f
 
 .link-to-section
@@ -144,6 +163,12 @@
 				padding: 10px 0
 				font-weight: 600
 				color: #333333
+
+.tab-wrapper
+	.tab-item
+		display: none
+		&.active
+			display: block
 
 .lcl
 	overflow: hidden

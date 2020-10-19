@@ -117,3 +117,179 @@
 				justify-content: center
 				color: #fff
 				font-family: "Montserrat-Bold"
+
+.product-description
+	padding: 60px 0 0 0
+	.pro-descript
+		border: 1px solid #e1e1e1
+		// background: #f9f9f9
+	.tab-panels
+		border-bottom: 1px solid #e1e1e1
+		ul 
+			padding: 0
+			list-style: none
+			display: flex
+			li
+				display: flex
+				a 
+					font-size: 16px
+					color: #00415f
+					background: none
+					font-weight: 600
+					width: 210px
+					height: 40px
+					border-left: 1px solid #00415f
+					border-top: 1px solid #00415f
+					border-right: 1px solid #00415f
+					border-bottom: 1px solid #00415f
+					display: flex
+					align-items: center
+					justify-content: center
+					text-transform: uppercase
+					@media(max-width: 576px)
+						padding: 5px 10px
+						width: max-content
+					&:hover
+						// background: $azure
+						// color: #ffffff
+				&.active
+					a
+						color: #ffffff
+						background: #00415f
+	article
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.fullcontent
+			overflow: hidden
+			max-height: 300px
+			transition: max-height .5s ease-in-out
+			color: #333333
+			// color: $azure
+			@media(min-width: 1260px)
+				max-height: 400px
+			a 
+				// color: $azure
+			ul 
+				color: #333
+			table
+				width: 100%
+				tbody
+					tr
+						border: 2px dotted #d7d7d7
+						th 
+							background: #f5f5f5 
+							width: 232px
+							height: 42px
+							padding-left: 20px
+							
+						td
+							width: 360px
+							height: 42px
+							padding-left: 20px
+							color: #333333
+							background: #ffffff
+							&:first-child
+								
+								background: #f5f5f5
+								
+								// max-width: 300px !important
+							&:nth-child(2)
+								background: #fff
+							// &:first-child
+								
+							// 	background: #f5f5f5
+							// 	width: 40%
+							&:last-child
+								background: #ffffff
+							@media(min-width: 1024px)
+								&:first-child
+									
+									width: 300px !important
+			.description-detail
+				.content
+					p 
+						font-size: 16px
+						color: #333 
+		.btn-wrapper-center
+			display: flex
+			align-items: center
+			justify-content: center
+			.btn-view-more
+				width: 155px
+				height: 45px
+				color: #333333
+				margin: 30px 0 30px 0
+				display: flex
+				align-items: center
+				justify-content: center
+				&.open
+					.view-less-text
+						display: inline-block
+					.view-more-text
+						display: none
+					em 
+						transform: rotate(180deg)
+				span
+					font-size: 1rem
+					color: #ffffff
+					font-weight: 400
+					display: inline-block
+					margin-right: 5px
+				.view-more-text
+					display: inline-block
+				.view-less-text
+					display: none
+					
+				a 
+					font-size: 16px
+					color: #333333
+					padding-right: 10px
+				em 
+					font-size: 14px
+		&.active
+			.fullcontent
+				transition: max-height 1s ease-in-out
+			.view-more-text
+				@apply hidden
+			.view-less-text
+				@apply block
+			.btn-view-more
+				.plus-icon
+					&:after
+						transition: .3s all ease-in-out
+						opacity: 0
+	.description-wrapper
+		border-bottom: 1px solid #e1e1e1
+		border-left: 1px solid #e1e1e1
+		border-right: 1px solid #e1e1e1
+		padding: 30px 20px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
+		background: #f9f9f9
+		@media(min-width: 576px)
+			padding: 30px
+		@media(min-width: 1200px)
+			padding-left: 75px
+			padding-right: 75px
+		h2, h3, h4
+			// color: $azure
+		strong
+			// color: $azure
+			font-size: 18px
+			em
+				// color: $azure
+		img
+			max-width: 100%
+			height: auto
+			// display: block
+			margin: 1rem auto
+		p
+			font-size: 1rem
+			color: #333333
+			a 
+				// color: $azure
+				&:hover
+					border-bottom: 1px solid #62a6d3
