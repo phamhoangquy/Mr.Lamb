@@ -1,0 +1,119 @@
+.block_product-detail
+	padding-top: 70px
+	@media screen and ( max-width: 576px )
+		padding-top: 30px
+	.center
+		display: flex
+		align-items: center
+	.name_product
+		h2
+			font-size: 24px
+			color: #00415f
+			font-family: "Montserrat-Bold"
+	.block_price
+		display: flex
+		align-items: center
+		padding: 10px 0
+		border-bottom: 1px solid #e0e0e0
+		.price
+			p
+				font-family: "Montserrat-Bold"
+				color: #d80303
+				font-size: 24px
+				margin-right: 15px
+		.discount
+			p
+				text-decoration: line-through
+				font-size: 18px
+				color: #b4b0b0
+				margin-right: 15px
+		.link
+			.material-icons
+				font-size: 24px
+				color: #00415f
+				background-color: #f5f5f5
+				padding: 8px
+				border-radius: 50%
+				cursor: pointer
+
+	.description
+		display: flex
+		padding: 20px 0
+		border-bottom: 1px solid #e0e0e0
+		.title_description
+			width: 31%
+			p
+				color: #001111
+				font-family: "Montserrat-Bold"
+		.content_description
+			width: 69%
+		.content_status
+			width: 69%
+			p
+				color: #00415f
+				text-transform: uppercase
+				font-family: "Montserrat-Bold"
+		.content_size
+			width: 69%
+			ul
+				display: flex
+				list-style: none
+				li
+					.size
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 30px
+						height: 30px
+						border: 1px solid #999999
+						margin-right: 10px
+						font-size: 12px
+						&:hover
+							border: 1px solid #00415f
+							color: #00415f
+							cursor: pointer
+					.active
+						border: 1px solid #00415f
+						color: #00415f
+		.content_color
+			width: 69%
+			ul
+				display: flex
+				list-style: none
+				li
+					width: 30px
+					height: 30px
+					margin-right: 15px
+					border-radius: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					&:nth-child(1)
+						.color
+							background-color: #cb5e13
+					&:nth-child(2)
+						.color
+							background-color: #091857
+					&:nth-child(3)
+						.color
+							background-color: #570909
+					.color
+						width: 20px
+						height: 20px
+						background-color: #cb5e13
+						border-radius: 50%
+						padding: 10px
+				.active
+					border: 1px solid #074663
+		.content_number
+			width: 69%
+			.add-to-card
+				width: 200px
+				height: 40px
+				background-color: #074663
+				display: flex
+				align-items: center
+				justify-content: center
+				color: #fff
+				font-family: "Montserrat-Bold"
