@@ -1,8 +1,9 @@
 $(document).ready(function() {
     swiperInit();
-    toggleSupport();
+    toggleSupportClient();
     sideNavigation();
     sideNavigation2();
+
 });
 
 // header
@@ -17,6 +18,24 @@ $('.overlay').click(function() {
     $('.overlay').toggleClass("show");
 });
 
+// Toggle
+function toggleSupportClient() {
+    var coll = document.getElementsByClassName("togglesupport");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+}
 // toggle support
 function toggleSupport() {
     $(".toggle-item > .title").click(function(e) {
@@ -118,6 +137,7 @@ function swiperInit() {
             }
         });
     }
+
 }
 
 function sideNavigation() {

@@ -24,7 +24,65 @@
 					&:hover
 						a
 							color: #00415f
-	.right-support
+	.sp-client
+		border: 1px solid #e0e0e0
+		padding: 30px
+		margin-bottom: 30px
+		.title-sp
+			h2
+				font-size: 18px 
+				color: #111111
+				text-transform: uppercase
+				font-family: "Montserrat-Medium"
+		.big-togglesupport
+			list-style: none
+			// .title
+			// 	text-transform: uppercase
+			// 	font-size: 18px
+			// 	font-family: "Montserrat-Medium"
+			// 	padding-top: 25px
+			.togglesupport
+				color: #111111
+				font-family: "Montserrat-Medium"
+				background-color: transparent
+				cursor: pointer
+				padding: 15px 0px
+				width: 100%
+				border: none
+				outline: none
+				display: flex
+				justify-content: space-between
+				align-items: center
+				font-size: 16px
+				border-bottom: 1px solid #e0e0e0
+				&:hover
+					color: #00415f
+				&:hover:after
+					color: #00415f
+				&:after
+					content: '\f078'
+					font-family: 'Font Awesome 5 Pro'
+					font-weight: bold
+					font-size: 12px
+					color: #111111
+					float: right
+				@media screen and ( max-width: 1024px )
+					padding: 14px 20px
+				@media screen and ( max-width: 576px )
+					padding: 14px 20px
+			.active
+				color: #00415f
+				border-bottom: 1px solid #00415f
+			.active:after
+				content: "\f077"
+				color: #00415f
+			.content
+				max-height: 0
+				overflow: hidden
+				transition: max-height 0.2s ease-out
+				.caption
+					padding: 20px 0
+	// .right-support
 		padding: 30px
 		border: 1px solid #e0e0e0
 		@media screen and ( max-width: 576px )
