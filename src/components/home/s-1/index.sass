@@ -1,0 +1,72 @@
+.block_s-1
+	.slide-product
+		position: relative
+		.nav-arrow-prev,.nav-arrow-next
+			position: absolute
+			top: 43%
+			z-index: 2
+			font-size: 36px
+			color: #707070
+			cursor: pointer
+			display: flex
+			justify-content: center
+			align-items: center
+		.nav-arrow-next
+			right: -40px
+			@media screen and ( max-width: 576px)
+				right: -10px
+		.nav-arrow-prev
+			left: -40px
+			@media screen and ( max-width: 576px)
+				left: -10px
+		.swiper-container
+			padding: 15px
+			margin-left: -15px
+			margin-right: -15px
+			.big-product
+				.card_img
+					.img
+						width: 100%
+						img
+							width: 100%
+							height: 100%
+					.sale
+						position: absolute
+						top: -12px
+						left: -2px
+						width: 70px
+						height: 56px
+						img
+							width: 100%
+							height: 100%
+						@media screen and ( max-width: 576px )
+							top: -7px
+							width: 46px
+							height: 36px
+				.content-product
+					text-align: center
+					padding-top: 15px
+					padding-bottom: 28px
+					.name_product
+						a
+							color: #111111
+							font-size: 1rem
+					.price
+						p
+							color: #d30000
+							font-size: 1rem
+							font-family: "Montserrat-Bold"
+					.discount
+						p
+							text-decoration: line-through
+							color: #b4b0b0
+							font-size: 1rem
+				&:hover
+					cursor: pointer
+					.content-product
+						.name_product
+							a
+								color: #00415f
+						.price
+							p
+								color: #00415f

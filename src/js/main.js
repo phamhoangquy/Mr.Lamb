@@ -43,7 +43,7 @@ function toggleSupport() {
 }
 
 function tabActive() {
-    $(".tab-navigation li a").on("click", function() {
+    $(".tab-navigation li a").on("click", function () {
         $(this).parents(".tab-navigation").find("li").removeClass("active");
         $(this).parents("li").addClass("active");
 
@@ -66,6 +66,15 @@ function swiperInit() {
             type: "bullets",
             clickable: "true"
         }
+    });
+    var Homeproductswiper = new Swiper('.slide-product .swiper-container', {
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".nav-arrow-next",
+            prevEl: ".nav-arrow-prev",
+        },
     });
     var brandSwiper = new Swiper(".block_news-event .swiper-container", {
         // Optional parameters
@@ -104,7 +113,7 @@ function swiperInit() {
         },
     });
     // Mega
-    
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
