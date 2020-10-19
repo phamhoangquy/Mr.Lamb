@@ -75,6 +75,16 @@ function swiperInit() {
             nextEl: ".nav-arrow-next",
             prevEl: ".nav-arrow-prev",
         },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            990: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
     });
     var brandSwiper = new Swiper(".block_news-event .swiper-container", {
         // Optional parameters
