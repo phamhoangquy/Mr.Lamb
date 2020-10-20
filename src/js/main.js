@@ -246,7 +246,55 @@ function swiperInit() {
             }
         });
     }
+    var productThumbs = new Swiper(
+        ".swiper-product-thumbs  .swiper-container", {
+            spaceBetween: 10,
+            freeMode: false,
+            breakpointsInverse: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    direction: "horizontal",
+                    spaceBetween: 10
+                },
+                576: {
+                    slidesPerView: 3.5,
+                    direction: "horizontal",
+                    spaceBetween: 10
+                },
+                1025: {
+                    slidesPerView: 4,
+                    direction: "vertical"
+                },
+                1440: {
+                    slidesPerView: 4,
+                    direction: "vertical"
+                }
+            },
+            centeredSlides: true,
+            direction: "vertical",
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: ".product-thumb-next",
+                prevEl: ".product-thumb-prev"
+            }
+        }
+    );
 
+    var productMain = new Swiper(".swiper-product-main .swiper-container", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
+        speed: 750,
+        loop: false,
+        thumbs: {
+            swiper: productThumbs
+        }
+    });
 }
 
 function sideNavigation() {
