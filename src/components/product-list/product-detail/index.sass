@@ -207,6 +207,8 @@
 									
 									width: 300px !important
 			.description-detail
+				padding-bottom: 20px
+				border-bottom: 1px solid #e0e0e0
 				.content
 					p 
 						font-size: 16px
@@ -293,3 +295,119 @@
 				// color: $azure
 				&:hover
 					border-bottom: 1px solid #62a6d3
+
+.block_product-detail-3
+	padding: 55px 0 90px 0
+	@media screen and ( max-width: 576px )
+		padding: 30px 0 30px 0
+	.product-related-swiper-wrapper
+		position: relative
+		padding-top: 15px
+		@media screen and ( max-width: 576px )
+			padding-top: 0
+	.nav-arrow-prev,.nav-arrow-next
+		position: absolute
+		width: 40px
+		height: 40px
+		top: 40%
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: .3s all  ease-in-out
+		@media screen and ( max-width: 400px )
+			top: 40%
+		&:hover
+			// color: #c7931c
+		em
+			transition: .3s all  ease-in-out
+			color: #707070
+			font-size: 36px
+			color: #999999
+			// @media screen and ( max-width: 576px )
+			// 	font-size: 48px
+	.nav-arrow-next
+		right: -60px
+		cursor: pointer
+		@media screen and ( max-width: 1439px)
+			right: -45px
+		@media screen and ( max-width: 1350px)
+			right: 0
+			
+		@media screen and ( max-width: 767px)
+			right: 15px
+		@media screen and ( max-width: 576px)
+			right: -15px
+			top: 120px
+			
+	.nav-arrow-prev
+		left: -60px
+		cursor: pointer
+		@media screen and ( max-width: 1439px)
+			left: -45px
+		@media screen and ( max-width: 1350px)
+			left: 0
+		@media screen and ( max-width: 767px)
+			left: 15px
+		@media screen and ( max-width: 576px)
+			left: -15px
+			top: 120px
+		
+	.swiper-container
+		margin: 0
+		@media screen and ( max-width: 1350px)
+			margin: 0 40px
+	.swiper-wrapper
+		.swiper-slide
+			.product-detail-slide
+				.card_img
+					.img
+						max-width: 100%
+						max-height: 100%
+						width: 100%
+						height: 345px
+						@media screen and ( max-width: 576px )
+							height: 345px
+						img
+							width: 100%
+							height: 100%
+							object-fit: cover
+					.sale
+						position: absolute
+						top: -12px
+						left: -2px
+						width: 70px
+						height: 56px
+						img
+							width: 100%
+							height: 100%
+						@media screen and ( max-width: 576px )
+							top: -7px
+							width: 46px
+							height: 36px
+				.content-product-silde
+					text-align: center
+					padding-top: 15px
+					padding-bottom: 28px
+					.name_product
+						a
+							color: #111111
+							font-size: 1rem
+					.price
+						p
+							color: #d30000
+							font-size: 1rem
+							font-family: "Montserrat-Bold"
+					.discount
+						p
+							text-decoration: line-through
+							color: #b4b0b0
+							font-size: 1rem
+				&:hover
+					cursor: pointer
+					.content-product-silde
+						.name_product
+							a
+								color: #00415f
+						.price
+							p
+								color: #00415f
