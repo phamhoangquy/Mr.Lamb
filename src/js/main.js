@@ -5,6 +5,7 @@ $(document).ready(function() {
     sideNavigation2();
     tabActive();
     watchMoreDetail();
+    ZoomImg();
 });
 
 // header
@@ -295,6 +296,27 @@ function swiperInit() {
             swiper: productThumbs
         }
     });
+}
+
+function ZoomImg() {
+    if ($(window).width() > 1024) {
+        $(".swiper-slide-active .zoom-img").ezPlus({
+            gallery: "gallery_01",
+            cursor: "pointer",
+            easing: 'true',
+            galleryActiveClass: "active",
+            imageCrossfade: true,
+            loadingIcon: "http://www.elevateweb.co.uk/spinner.gif",
+            zoomWindowWidth: "500",
+            zoomWindowHeight: "500",
+            borderSize: "1",
+            borderColour: "#ff4900",
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500
+        });
+    }
 }
 
 function sideNavigation() {
