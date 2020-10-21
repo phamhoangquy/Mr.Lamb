@@ -1,15 +1,16 @@
 header
 	.container
 		.header_top
-			.header
+			.header_left
 				.search
-					input.form-control(type='text', placeholder="Tìm kiếm")
-					//- em.fas.fa-search
-			.header
+					input(type='text', placeholder="Tìm kiếm")
+					button(type='submit')
+						em.fal.fa-search
+			.header_logo
 				a(href="index.html")
 					.img
 						img(src="./img/logo.png", alt="")
-			.header
+			.header_right
 				.login
 					a(href="") Đăng kí
 				.regist
@@ -59,5 +60,7 @@ header
 					.regist
 						a(href="#") Đăng nhập
 				.search_mobile
-					input.form-control(type='text', placeholder="Tìm kiếm")
+					input(type='text', placeholder="Tìm kiếm")
+					button(type='submit')
+						em.fal.fa-search
 	.overlay
