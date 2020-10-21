@@ -4,6 +4,8 @@ $(document).ready(function() {
     sideNavigation();
     sideNavigation2();
     tabActive();
+    tabActiveHome();
+    tabActiveHome2();
     watchMoreDetail();
     ZoomImg();
 });
@@ -78,7 +80,7 @@ function swiperInit() {
             clickable: "true"
         }
     });
-    // Product Home
+    // Product Home 1
     $(".trinity-item-swiper .swiper-container").each(function(index, element) {
         var $this = $(this);
         $this.addClass("instance-" + index);
@@ -372,6 +374,52 @@ function tabActive() {
 
         let maxHeight = 400;
         let contentTab = $(".tab-wrapper .tab-item.active");
+        // console.log(contentTab.height())
+        if (contentTab.height() < maxHeight) {
+            $(contentTab).find('.btn-view-more').hide()
+        }
+    });
+}
+
+function tabActiveHome() {
+    $(".tab-navigation-fashion li a").on("click", function() {
+        $(this)
+            .parents(".tab-navigation-fashion")
+            .find("li")
+            .removeClass("active");
+        $(this)
+            .parents("li")
+            .addClass("active");
+
+        var display = $(this).attr("data-type");
+        $(".tab-item-fashion").removeClass("active");
+        $("#" + display).addClass("active");
+
+        let maxHeight = 400;
+        let contentTab = $(".tab-wrapper-fashion .tab-item-fashion.active");
+        // console.log(contentTab.height())
+        if (contentTab.height() < maxHeight) {
+            $(contentTab).find('.btn-view-more').hide()
+        }
+    });
+}
+
+function tabActiveHome2() {
+    $(".tab-navigation-news li a").on("click", function() {
+        $(this)
+            .parents(".tab-navigation-news")
+            .find("li")
+            .removeClass("active");
+        $(this)
+            .parents("li")
+            .addClass("active");
+
+        var display = $(this).attr("data-type");
+        $(".tab-item-news").removeClass("active");
+        $("#" + display).addClass("active");
+
+        let maxHeight = 400;
+        let contentTab = $(".tab-wrapper-news .tab-item-news.active");
         // console.log(contentTab.height())
         if (contentTab.height() < maxHeight) {
             $(contentTab).find('.btn-view-more').hide()
