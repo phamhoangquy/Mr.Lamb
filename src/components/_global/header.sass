@@ -121,15 +121,25 @@ header
 				display: flex
 				justify-content: space-between
 				align-items: center
-				height: 50px
+				padding: 13px
 				li
 					text-transform: uppercase
 					list-style: none
-					padding: 0 30px
+					// padding: 0 30px
 					a
 						color: #fefefe
 						font-family: "Montserrat-SemiBold"
 						font-size: 16px
+						padding: 15px
+					&:hover
+						a
+							background: #00415f
+							padding: 15px
+					&.active
+						a
+							background: #00415f
+							padding: 15px
+					
 	.menu_mobile
 		width: 50%
 		height: 100%

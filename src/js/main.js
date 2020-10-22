@@ -111,10 +111,10 @@ function swiperInit() {
                     slidesPerView: 1,
                 },
                 769: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                 },
                 1200: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                 },
             },
             navigation: {
