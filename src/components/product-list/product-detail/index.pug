@@ -79,8 +79,15 @@ section.block_product-detail
 								li
 									.color
 					.description
-						.title_description.center
-							p Số lượng
+						.item-quantity
+							.input-group
+								.input-group-btn
+									.qty-minus.btn-number
+										em.ri-subtract-line
+								input.product-details-quantity.form-control.input-number(type='text', value='1')
+								.input-group-btn
+									.qty-plus.btn-number
+										em.ri-add-line
 						.content_number
 							a.add-to-card(href="#") Thêm giỏ hàng
 

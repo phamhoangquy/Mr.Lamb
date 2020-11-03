@@ -13,6 +13,7 @@ $(document).ready(function() {
     mappingMenu();
     mappingLogin();
     mappingSearch();
+    quantityNumber();
 });
 
 // header
@@ -518,7 +519,7 @@ function mappingLogin() {
 
 function mappingSearch() {
     return new MappingListener({
-        selector: ".search",
+        selector: ".searchbox",
         mobileWrapper: ".mobile-wrapper",
         mobileMethod: "appendTo",
         desktopWrapper: ".header_left",
@@ -539,6 +540,24 @@ function scrollFunction() {
     }
 }
 
+function quantityNumber() {
+    $(".qty-minus").click(function() {
+        let minus = $(this).parents('.input-group').find('input').val();
+        console.log('top')
+        console.log(minus)
+        if (minus > 0) {
+            $(this).parents('.input-group').find('input').val(minus - 1);
+        } else {
+            $(this).parents('.input-group').find('input').val(0);
+        }
+    });
+    $(".qty-plus").on("click", function() {
+        let plus = Number($(this).parents('.input-group').find('input').val());
+        console.log('bottom')
+        console.log(plus)
+        $(this).parents('.input-group').find('input').val(plus + 1);
+    });
+}
 
 function setBackground() {
     $("[setBackground]").each(function() {
