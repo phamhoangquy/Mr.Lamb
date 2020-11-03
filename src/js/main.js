@@ -501,7 +501,7 @@ function mappingMenu() {
         mobileMethod: "appendTo",
         desktopWrapper: ".nav-wrapper",
         desktopMethod: "appendTo",
-        breakpoint: 1200
+        breakpoint: 1280
     }).watch();
 }
 
@@ -512,7 +512,7 @@ function mappingLogin() {
         mobileMethod: "appendTo",
         desktopWrapper: ".language-wrapper",
         desktopMethod: "insertBefore",
-        breakpoint: 1200
+        breakpoint: 1280
     }).watch();
 }
 
@@ -525,6 +525,18 @@ function mappingSearch() {
         desktopMethod: "appendTo",
         breakpoint: 1280
     }).watch();
+}
+
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.querySelector(".banner_header").style.display = "none";
+    } else {
+        document.querySelector(".banner_header").style.display = "unset";
+    }
 }
 
 
