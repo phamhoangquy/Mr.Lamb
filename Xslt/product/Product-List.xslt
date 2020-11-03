@@ -4,26 +4,30 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="block_name_category ajaxresponse">
-			<div class="name_category">
-				<h3>
-					<xsl:value-of disable-output-escaping="yes" select="/ProductList/ZoneTitle"></xsl:value-of>
-				</h3>
+		<div class="product-display ajaxresponse">
+			<div class="block_name_category ">
+				<div class="name_category">
+					<h3>
+						<xsl:value-of disable-output-escaping="yes" select="/ProductList/ZoneTitle"></xsl:value-of>
+					</h3>
+				</div>
+				<div class="wrap-left">
+					<div class="display display-option">
+						<p>Hiển thị</p>
+						<select class="ajaxsort">
+							<xsl:apply-templates select="/ProductList/PageSize" />
+						</select>
+					</div>
+					<div class="sort-wrapper ">
+						<select class='ajaxsort'>
+							<xsl:apply-templates select="/ProductList/SortBy"></xsl:apply-templates>
+						</select>
+					</div>
+				</div>
 			</div>
-			<div class="display display-option">
-				<p>Hiển thị</p>
-				<select class="ajaxsort">
-					<xsl:apply-templates select="/ProductList/PageSize" />
-				</select>
+			<div class="row ajaxresponsewrap">
+				<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 			</div>
-			<div class="sort-wrapper ">
-				<select class='ajaxsort'>
-					<xsl:apply-templates select="/ProductList/SortBy"></xsl:apply-templates>
-				</select>
-			</div>
-		</div>
-		<div class="row">
-			<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 	<xsl:template match="Product">
@@ -51,14 +55,15 @@
 						<xsl:if test="ShowOption > 0">
 							<div class="promotion">
 								<xsl:if test="floor(ShowOption div 4) mod 2 = 1">
-									<div class="discount"><img src="/Data/Sites/1/media/img/product/sale.png" alt=""/>
+									<div class="discount"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
 									</div>
 								</xsl:if>
 								<xsl:if test="floor(ShowOption div 2) mod 2 = 1">
-									<div class="sale"><img src="/Data/Sites/1/media/img/product/sale.png" alt=""/></div>
+									<div class="sale"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
+									</div>
 								</xsl:if>
 								<xsl:if test="floor(ShowOption div 1) mod 2 = 1">
-									<div class="hot"><img src="/Data/Sites/1/media/img/product/sale.png" alt=""/></div>
+									<div class="hot"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" /></div>
 								</xsl:if>
 							</div>
 						</xsl:if>

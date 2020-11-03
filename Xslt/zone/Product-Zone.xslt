@@ -11,7 +11,7 @@
 				</h2>
 			</div>
 			<ul class="side-navigation">
-				<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+				<xsl:apply-templates select="/ZoneList/Zone/Zone/Zone"></xsl:apply-templates>
 			</ul>
 		</div>
 	</xsl:template>
@@ -71,6 +71,7 @@
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
+							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						</a>
 						<em class="ri-arrow-down-s-line"></em></div>
 					<ul class="nav-sub-2">
