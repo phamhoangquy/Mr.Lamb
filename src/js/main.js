@@ -9,6 +9,10 @@ $(document).ready(function() {
     watchMoreDetail();
     showBackToTop();
     ZoomImg();
+    DataBG();
+    mappingMenu();
+    mappingLogin();
+    mappingSearch();
 });
 
 // header
@@ -128,7 +132,7 @@ function swiperInit() {
                     slidesPerView: 1,
                 },
                 769: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                 },
                 1200: {
                     slidesPerView: 4,
@@ -488,4 +492,56 @@ function watchMoreDetail() {
     //         $(this).find('.btn-view-more').hide()
     //     }
     // })
+}
+
+function mappingMenu() {
+    return new MappingListener({
+        selector: ".nav-menu",
+        mobileWrapper: ".mobile-wrapper",
+        mobileMethod: "appendTo",
+        desktopWrapper: ".nav-wrapper",
+        desktopMethod: "appendTo",
+        breakpoint: 1200
+    }).watch();
+}
+
+function mappingLogin() {
+    return new MappingListener({
+        selector: ".block_login",
+        mobileWrapper: ".mobile-wrapper",
+        mobileMethod: "appendTo",
+        desktopWrapper: ".language-wrapper",
+        desktopMethod: "insertBefore",
+        breakpoint: 1200
+    }).watch();
+}
+
+function mappingSearch() {
+    return new MappingListener({
+        selector: ".search",
+        mobileWrapper: ".mobile-wrapper",
+        mobileMethod: "appendTo",
+        desktopWrapper: ".header_left",
+        desktopMethod: "appendTo",
+        breakpoint: 1280
+    }).watch();
+}
+
+
+function setBackground() {
+    $("[setBackground]").each(function() {
+        var background = $(this).attr("setBackground");
+        $(this).css({
+            "background-image": "url(" + background + ")",
+            "background-size": "cover",
+            "background-position": "center center",
+        });
+    });
+    $("[setBackgroundRepeat]").each(function() {
+        var background = $(this).attr("setBackgroundRepeat");
+        $(this).css({
+            "background-image": "url(" + background + ")",
+            "background-repeat": "repeat",
+        });
+    });
 }

@@ -11,11 +11,12 @@
     "js": [
         "bower_components/jquery/dist/jquery.min.js",
         "bower_components/fancybox/dist/jquery.fancybox.js",
-        "src/_plugins/mapping-listener.js",
-        "src/_plugins/mapping.js",
         "bower_components/swiper/dist/js/swiper.js",
         "src/_plugins/medium-zoom.js",
-        "bower_components/fancybox/dist/jquery.fancybox.min.js"
+        "bower_components/fancybox/dist/jquery.fancybox.min.js",
+        "src/_plugins/mapping-listener.js",
+        "src/_plugins/mapping.js",
+        "src/_plugins/data-bg.js"
     ],
     "css": [
         "src/_plugins/font.css",
