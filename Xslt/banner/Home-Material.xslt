@@ -12,15 +12,21 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="material-product">
-							<div class="title-material">
-								<h2>
-									<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-									<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-								</h2>
-							</div>
-							<div class="content-material">
-								<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
-							</div>
+							<xsl:if test="Title !=''">
+								<div class="title-material">
+									<h2>
+										<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+										<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+									</h2>
+								</div>
+							</xsl:if>
+							<xsl:if test="Description !=''">
+
+								<div class="content-material">
+									<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
+								</div>
+							</xsl:if>
+
 							<xsl:if test="Url !=''">
 
 								<div class="btn-view-more"><a>
