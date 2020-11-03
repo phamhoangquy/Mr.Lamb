@@ -499,7 +499,7 @@ function mappingMenu() {
         selector: ".nav-menu",
         mobileWrapper: ".mobile-wrapper",
         mobileMethod: "appendTo",
-        desktopWrapper: ".nav-wrapper",
+        desktopWrapper: ".header-navmenu-bottom",
         desktopMethod: "appendTo",
         breakpoint: 1280
     }).watch();
