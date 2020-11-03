@@ -10,9 +10,9 @@ $(document).ready(function() {
     showBackToTop();
     ZoomImg();
     DataBG();
-    mappingMenu();
-    mappingLogin();
-    mappingSearch();
+    // mappingMenu();
+    // mappingLogin();
+    // mappingSearch();
 });
 
 // header

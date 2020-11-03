@@ -319,7 +319,7 @@
 			</div>
 		</div>
 	</xsl:template>
-	<xsl:template match="ProductImages" mode='Thumb'>
+	<xsl:template match="ProductImages" mode='Main'>
 		<div class="swiper-slide">
 			<div class="wrapper">
 				<img class="zoom-img">
