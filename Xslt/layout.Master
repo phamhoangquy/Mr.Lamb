@@ -43,21 +43,36 @@
 				<div class="container">
 					<div class="header_top">
 						<div class="header_left">
-							<div class="searchbox">
-								<input type="text" placeholder="Tìm kiếm">
-								<button><em class="fal fa-search"></em></button>
-							</div>
+							<portal:ModuleWrapper ID="mdl250" runat="server" ConfigureModuleId="250" />
 						</div>
-						<div class="header_logo"><a href="index.html">
-								<div class="img"><img src="./img/logo.png" alt=""></div>
-							</a></div>
+						<div class="header_logo">
+							<portal:ModuleWrapper ID="mdl251" runat="server" ConfigureModuleId="251" />
+						</div>
 						<div class="header_right">
 							<div class="block_login">
-								<div class="login"><a href="">Đăng kí</a></div>
-								<div class="regist"><a href="">Đăng nhập</a></div>
+								<div class="account-wrapper"><a class='account-icon' href='javascript:;'>
+										<em class='mdi mdi-account'> </em>
+									</a>
+									<div class="wrap">
+										<ul>
+											<li>
+												<portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="false"
+													CssClass='text' />
+											</li>
+											<li>
+												<portal:RegisterLink ID="registerLink" runat="server"
+													RenderAsListItem="false" CssClass='text' />
+											</li>
+											<portal:welcomemessage id="WelcomeMessage" runat="server"
+												wrapinprofilelink="true" profilelink="~/Account/UserProfile.aspx"
+												RenderAsListItem="true" CssClass='text' />
+										</ul>
+										<portal:LogoutLink ID="LogoutLink" runat="server" CssClass='text logout' />
+									</div>
+								</div>
 							</div>
 							<div class="language-wrapper">
-								<div class="EN"><a href="">EN</a></div>
+								<portal:ModuleWrapper ID="mdl252" runat="server" ConfigureModuleId="252" />
 							</div>
 							<div class="cart"><em class="fas fa-shopping-cart"></em></div>
 							<div class="moblie-toggle"><em class="header_btn fal fa-bars"></em></div>
