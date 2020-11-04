@@ -61,14 +61,7 @@
 									<p>Tình trạng</p>
 								</div>
 								<div class="content_status">
-									<xsl:choose>
-										<xsl:when test="OutStock='true'">
-											<p>Hết hàng</p>
-										</xsl:when>
-										<xsl:otherwise>
-											<p>Còn hàng</p>
-										</xsl:otherwise>
-									</xsl:choose>
+									<p>Còn hàng</p>
 								</div>
 							</div>
 							<div class="description">
@@ -76,9 +69,7 @@
 									<p>Mã sản phẩm</p>
 								</div>
 								<div class="content_description">
-									<p>
-										<xsl:value-of disable-output-escaping="yes" select="ProductId"></xsl:value-of>
-									</p>
+									<p>10F19SWE005</p>
 								</div>
 							</div>
 							<div class="description">
@@ -146,6 +137,19 @@
 							<div class="description">
 								<div class="title_description center">
 									<p>Số lượng</p>
+									<div class="item-quantity">
+										<div class="input-group">
+											<div class="input-group-btn">
+												<div class="qty-minus btn-number"><em class="ri-subtract-line"></em>
+												</div>
+											</div>
+											<input class="product-details-quantity form-control input-number"
+												type="text" value="1"/>
+											<div class="input-group-btn">
+												<div class="qty-plus btn-number"><em class="ri-add-line"></em></div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="content_number">
 									<xsl:choose>
