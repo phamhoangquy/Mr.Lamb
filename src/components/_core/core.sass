@@ -36,3 +36,65 @@ main
 	display: flex
 	align-items: center
 	justify-content: space-between
+
+.account-wrapper
+	display: flex
+	align-items: center
+
+	.wrap
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-content: flex-end
+	.logout
+		font-size: 14px
+		font-weight: 300
+		display: inline-block
+		padding: 0 2px
+		transition: .3s all  ease-in-out
+		color: #333333
+		&:hover
+			text-decoration: underline
+	.account-icon
+		em
+			color: #333333
+			font-size: 24px
+			height: 20px
+			line-height: 24px
+		
+		span
+			font-size: 14px
+			font-weight: 300
+	ul
+		display: flex 
+		justify-content: center
+		align-items: center
+		li
+			display: flex 
+			justify-content: center
+			align-items: center
+			&:first-child
+				a
+					display: flex 
+					justify-content: center
+					align-items: center
+					&:after
+						
+						color: #333333
+						display: inline-block
+						content: '/'
+						margin-left: 5px
+						font-size: 14px
+						margin-bottom: 5px
+						margin-left: 6px
+						padding-right: 0
+			&:hover
+				a
+					text-decoration: underline
+			a
+				font-size: 14px
+				font-weight: 300
+				display: inline-block
+				padding: 0 2px
+				transition: .3s all  ease-in-out
+				color: #333333

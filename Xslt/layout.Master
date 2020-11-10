@@ -51,7 +51,7 @@
 						<div class="header_right">
 							<div class="block_login">
 								<div class="account-wrapper"><a class='account-icon' href='javascript:;'>
-										<em class='mdi mdi-account'> </em>
+										<em class='material-icons'>person </em>
 									</a>
 									<div class="wrap">
 										<ul>
@@ -80,17 +80,8 @@
 					</div>
 				</div>
 				<div class="header_bot">
-					<div class="container">
-						<div class="nav-wrapper">
-							<ul class="nav-menu">
-								<li class="active"><a href="about.html">Giới thiệu</a></li>
-								<li><a href="product-list.html">Sản phẩm</a></li>
-								<li><a href="promotion.html">Khuyến mãi</a></li>
-								<li><a href="news-list.html">Tin tức</a></li>
-								<li><a href="support-client.html">Hỗ trợ</a></li>
-								<li><a href="contact.html">Liên hệ</a></li>
-							</ul>
-						</div>
+					<div class="container header-navmenu-bottom">
+						<portal:ModuleWrapper ID="mdl253" runat="server" ConfigureModuleId="253" />
 					</div>
 				</div>
 				<div class="menu_mobile"><em class="header_btn fal fa-times"></em>
@@ -99,11 +90,12 @@
 				<div class="overlay"></div>
 			</header>
 
-			<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
-				<asp:ContentPlaceHolder ID="altContent1" runat="server">
-				</asp:ContentPlaceHolder>
-			</asp:Panel>
 			<main>
+				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+					<asp:ContentPlaceHolder ID="altContent1" runat="server">
+					</asp:ContentPlaceHolder>
+
+				</asp:Panel>
 				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
 					<asp:ContentPlaceHolder ID="leftContent" runat="server">
 					</asp:ContentPlaceHolder>
@@ -117,14 +109,83 @@
 					<asp:ContentPlaceHolder ID="rightContent" runat="server">
 					</asp:ContentPlaceHolder>
 				</asp:Panel>
-			</main>
-
-			<footer>
 				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
 					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 				</asp:Panel>
-				<portal:CopyrightLabel ID="cl1" runat="server" ShowYear="true" BeginYear="2017" />
+			</main>
+
+			<footer>
+
+
+
+
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="footer-link">
+
+									<portal:ModuleWrapper ID="mdl254" runat="server" ConfigureModuleId="254" />
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="footer-link">
+									<portal:ModuleWrapper ID="mdl255" runat="server" ConfigureModuleId="255" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<portal:ModuleWrapper ID="mdl256" runat="server" ConfigureModuleId="256" />
+					</div>
+				</div>
+				<div class="footer-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card pr-40">
+								<portal:ModuleWrapper ID="mdl257" runat="server" ConfigureModuleId="257" />
+							</div>
+							<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
+								<portal:ModuleWrapper ID="mdl258" runat="server" ConfigureModuleId="258" />
+							</div>
+							<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
+								<portal:ModuleWrapper ID="mdl259" runat="server" ConfigureModuleId="259" />
+							</div>
+							<div class="col-xl-3 col-md-6 col-sm-6 col-12 footer-card">
+								<portal:ModuleWrapper ID="mdl260" runat="server" ConfigureModuleId="260" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="container">
+						<div class="bg-pay">
+							<div class="pay-link">
+								<portal:ModuleWrapper ID="mdl261" runat="server" ConfigureModuleId="261" />
+							</div>
+							<div class="pay-link">
+								<portal:ModuleWrapper ID="mdl262" runat="server" ConfigureModuleId="262" />
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="policy-link">
+							<portal:ModuleWrapper ID="mdl263" runat="server" ConfigureModuleId="263" />
+						</div>
+						<div class="copyright">
+							<p>
+								<portal:CopyrightLabel ID="cl1" runat="server" ShowYear="true" BeginYear="2017" />
+							</p>
+						</div>
+					</div>
+				</div>
+
+
 			</footer>
+			<portal:ModuleWrapper ID="mdl264" runat="server" ConfigureModuleId="264" />
+			<portal:ModuleWrapper ID="mdl265" runat="server" ConfigureModuleId="265" />
 		</div>
 		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 			<div class="row">
@@ -201,6 +262,8 @@
 	<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>
 	<script src="/Data/Sites/1/skins/default/js/ecommerce.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js">
+	</script>
 </body>
 
 </html>
