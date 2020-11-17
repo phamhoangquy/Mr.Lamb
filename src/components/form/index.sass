@@ -45,7 +45,7 @@
 				&.fa-exclamation-triangle
 					color: firebrick
 			input,textarea
-				padding-left: 20px
+				padding: 0 20px
 				border: 1px solid #e0e0e0
 				height: 42px
 				width: 100%
@@ -65,51 +65,109 @@
 			textarea
 				height: 10rem
 				padding: 10px 0 0 20px
-		.frm-captcha
-			display: flex
-			@media screen and ( max-width: 576px )
-				display: flex
-				flex-wrap: wrap
-			.frm-captcha-input
-				order: 2
-				padding-left: 50px
-				width: 45%
-				display: flex
-				justify-content: center
-				align-items: center
-				@media screen and ( max-width: 1200px )
-					display: flex
-					justify-content: space-between
-					align-items: center
-					padding-left: 20px
-					width: 40%
-				@media screen and ( max-width: 1024px )
-					display: flex
-					justify-content: space-between
-					align-items: center
-					padding-left: 20px
-				@media screen and ( max-width: 768px )
-					display: flex
-					justify-content: space-between
-					align-items: center
-					padding-left: 20px
+		
+.frm-btn-reset
+	display: none
+.frm-captcha
+	display: inline-flex
+	justify-content: flex-end
+	align-items: center
+	flex-direction: row-reverse
+	@media screen and ( max-width: 576px)
+		justify-content: flex-start
+		
+	img
+		height: 40px !important
+		max-width: auto
+		max-width: 150px
+		@media screen and ( max-width:1200px)
+			max-width: 150px
+			
+	@media screen and(max-width:576px)
+		flex-direction: column-reverse
+	.frm-captcha-input
+		margin-top: 0
+		padding: 0 0 0 60px !important
+		margin: 0 !important
+		@media screen and ( max-width:576px)
+			padding: 0  !important
+			margin-left: 0
+			margin-top: 30px
+		label
+			display: none
+		input
+			padding: 0 10px
+			margin-top: 0
+			height: 40px
+			width: 200px !important
+			@media screen and ( max-width:1280px)
+				max-width: 200px
+			@media screen and ( max-width:1200px)
+				max-width: 150px
 				
-				@media screen and ( max-width: 576px )
-					display: flex
-					justify-content: space-between
-					align-items: center
-					padding-left: 20px
-					width: 100%
-				@media screen and ( max-width: 576px )
-					padding-top: 30px
-					order: 1
-		.RadCaptcha_Default
-			width: 25%
-			max-width: 25%
-			@media screen and ( max-width: 576px )
-				flex: 0 0 100%
-				max-width: 100%
-			#ctl00_mainContent_ctl04_captcha_SpamProtectorPanel
-				#ctl00_mainContent_ctl04_captcha_ctl01
-					.rcRefreshImage
-						display: none
+			@media screen and ( max-width:1024px)
+				max-width: 200px
+				
+			@media (max-width: 767.98px)
+				margin-left: 20px
+			@media (max-width: 576.98px)
+				margin-left: 0
+	.rcRefreshImage
+		position: absolute
+		opacity: 1
+		cursor: pointer
+		height: 0
+		width: 0
+		right: -5px
+		top: 5px
+		color: #ffffff
+		z-index: 0
+		font-size: 0
+		&:before
+			font-family: 'Font Awesome 5 Pro'
+			position: absolute
+			top: 0
+			right: -40px
+			opacity: 1
+			z-index: 99
+			color: #9d9080
+			font-size: 30px
+			content: "\f2f9"
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			@media screen and ( max-width:576px)
+				height: 50px
+@media screen and ( max-width:500px )
+	#ctl00_mainContent_ctl05_captcha_ctl00
+		display: none
+#ctl00_mainContent_ctl02_captcha_ctl01
+	position: relative
+#ctl00_mainContent_ctl06_btnReset,#ctl00_mainContent_ctl05_captcha_ctl00,#ctl00_mainContent_ctl08_captcha_ctl00,#ctl00_mainContent_ctl07_captcha_ctl00
+	display: none
+#ctl00_mainContent_ctl06_txtCaptcha
+	margin-left: 10px
+	@media screen and ( max-width: 576px)
+		margin: 0
+		
+#ctl00_mainContent_ctl06_captcha_CaptchaLinkButton
+	#text
+		display: none
+.RadCaptcha
+	@media screen and ( max-width:767.5px)
+		margin-left: 0
+	@media screen and ( max-width: 576px)
+		width: 100% !important
+		margin-bottom: 15px
+	span
+		display: none
+	>div
+		>div
+			display: flex
+			position: relative
+			flex-direction: column-reverse
+			height: 40px !important
+			margin-top: 0
+			@media (max-width: 767.98px)
+				margin-right: 0
+				width: 180px
