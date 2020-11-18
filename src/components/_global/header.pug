@@ -23,8 +23,45 @@ header
 				.language-wrapper
 					.EN
 						a(href="") EN
-				.cart
-					em.fas.fa-shopping-cart
+	
+				.shopping-cart-toggle
+					.cart-icon
+						em.fas.fa-shopping-cart
+					.cart-number
+						.item-quantity
+							span.text Giỏ hàng 
+							span.number ( 5 
+							| )
+					.shopping-cart-wrapper
+						.head
+							.cart-quantity
+								.cart-icon-dark
+								.cart-number
+									.item-quantity Giỏ hàng (
+										span.number 5
+										| )
+							.sum-price
+								p Tổng cộng: 
+									span đ 2.950.000
+						.body
+							.scroll-wrapper
+								-for(i=0;i<5;i++)
+									.cart-item
+										.image
+											a(href="#")
+												img(src="./img/product/1.png", alt="")
+										.caption
+											.title
+												a(href="#") Áo sơ mi trăng soc xanh nhat trăng soc xanh nhat
+											.bottom
+												.price đ 1.125.000
+												.quantity Số lượng: 
+													span.number 1
+							
+						.btn-center
+							a.btn.btn-primary
+								span Thanh toán 
+								em.fas.fa-arrow-right
 				.moblie-toggle
 					em.header_btn.fal.fa-bars
 	.header_bot

@@ -1,0 +1,46 @@
+section.cart-display
+	.container
+		.admin-title
+			.text Giỏ hàng
+		.wrapper
+			.cart-table-wrapper
+				table.carttable(cellspacing='0', cellpadding='0')
+					thead
+						tr
+							th Sản phẩm 
+							th Giảm giá 
+							th Thành tiền
+					tbody
+						-for(i=0;i<5;i++)
+							tr
+								td
+									.product-item
+										.image
+											a(href="#")
+												img(src="./img/product/1.png", alt="")
+										.caption
+											.title
+												a(href="#") XE 3B L7 CHÚ BÒ CON VINATOY | M1766-X3B
+											a.remove-item
+												em.mdi.mdi-close-circle-outline
+												span Xóa
+			
+								td
+									.discount - 20%
+								td
+									.total d 1.250.000
+				.total-wrapper
+					table.total-table
+						tr
+							td Tam tinh
+							td d9 2.95.000
+						tr 
+							td Giam gia
+							td 0
+						tr
+							td Tong cong 
+							td d2.95000
+					.btn-right
+						a(href="#").btn.btn-primary.red
+							em.fas.fa-shopping-basket
+							span tiến hành đặt hàng

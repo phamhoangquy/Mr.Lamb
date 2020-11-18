@@ -1,0 +1,162 @@
+section.checkout-order.checkout-section
+	.container
+		.admin-title
+			.text Thông tin giao hàng
+		.row.pt-8
+			.col-12.col-lg-7
+				.admin-wrap
+					.checkout-form
+						.title-wrap
+							.text Thông tin người đặt hàng
+						.wrapper-form.customer-info-form
+							.form-group
+								.setting-control
+									input(type='text', placeholder='Họ tên')
+							.form-group
+								.setting-control
+									input(type='text', placeholder='Email')
+							.form-group
+								.setting-control
+									input(type='text', placeholder='Số điện thoại')
+					.checkout-form
+						.title-wrap
+							.text Thông tin người đặt hàng
+						.wrapper-form.customer-info-form-2
+							.radio-wrap
+								.qradio
+									input(type="radio" name='delivery')
+									label Người nhận là người đặt
+								.qradio
+									input(type="radio" name='delivery') 
+									label Người nhận khác người đặt
+							.hidden.checkout-receiver
+								.wrapper-form
+									.form-group
+										.setting-control
+											input(type='text', placeholder='Họ tên')
+									.form-group
+										.setting-control
+											input(type='text', placeholder='Số điện thoại')
+							.form-group
+								.setting-control
+									select
+										option Tỉnh thanh phố
+										option Ha noi
+										option Tp HCm
+							.form-group
+								.setting-control
+									select
+										option  Chọn quận huyện
+							.form-group
+								.setting-control
+									select
+										option  Chọn phường xã
+							.form-group
+								.setting-control
+									input(type="text", name="",placeholder='Địa chỉ')
+						
+							.form-group
+								.setting-control
+									textarea(placeholder='Ghi chú khác')
+							//- .other-address
+							//- 	span bạn muốn giao hàng  đến địa chỉ khác ?
+							//- 	a.btn.btn-edit Thêm địa chỉ giao hàng
+					.checkout-form
+						.title-wrap
+							.text phương thức  thanh toán
+						.wrapper-form.payment-method-form
+							.qradio
+								input(type="radio" name='payment')
+								label 
+									.image-wrapper
+										a(href="javascript:;")
+											img(src="./img/icon/ico-1.png", alt="")
+									.content
+										.title Thanh toán khi nhận hàng (COD)
+										.text Thanh toán bằng tiền mặt khi nhận hàng (COD)
+							.qradio
+								input(type="radio" name='payment')
+								label 
+									.image-wrapper
+										a(href="javascript:;")
+											img(src="./img/icon/ico-2.png", alt="")
+									.content
+										.title Thanh toán khi nhận hàng (COD)
+										.text Thanh toán bằng thẻ tín dụng Am vn Pay
+							.qradio
+								input(type="radio" name='payment')
+								label 
+									.image-wrapper
+										a(href="javascript:;")
+											img(src="./img/icon/ico-1.png", alt="")
+									.content
+										.title Thanh toán khi nhận hàng (COD)
+										.text Thanh toán bằng thẻ tín dụng Am vn Pay
+										
+									
+
+					.checkout-form
+						.title-wrap
+							.text Phương thức giao hàng
+						.wrapper-form.shipping-method-form
+							.qradio
+								input(type="radio" name='delivery')
+								label Nhận tại cửa hàng
+							.qradio
+								input(type="radio" name='delivery') 
+								label Giao hàng tận nơi
+					.term-service-wrap
+						.qcheckbox
+							input(type="checkbox")
+							label Tôi  đã đọc và đồng ý với 
+								a(href="#") Các điều khoản
+					.form-group
+						.setting-control
+							.btn-gap
+								a(href="#").btn.btn-primary.grey
+									em.mdi.mdi-reply
+									span Quay lại
+								a(href="#").btn.btn-primary.red
+									em.fas.fa-shopping-basket
+									span Thanh toán
+									
+			.col-12.col-lg-5
+				.checkout-form.checkout-cart
+					.title-wrap
+						.text Thông tin người đặt hàng
+					.wrapper-form.admin-wrap
+						.wrapper
+							-for(i=0;i<3;i++)
+								.item
+									.image-wrapper
+										a(href="#")
+											img(src="./img/product/1.png", alt="")
+									.content
+										.title
+											a(href="#") Áo sơ mi tráng sọc xanh nhạt
+											.price đ 1.250.000
+										.price-wrap
+											.line
+												span Số lượng
+												.quantity x1
+											.line
+												span Giảm giá
+												.temp đ 1.250.000
+						
+						.total
+							.text
+								p
+									strong tạm tính
+								p d 2.898.323
+							.text
+								p
+									strong  VAT
+								p d 2.898.323
+							.text
+								p
+									strong phi van chuyen
+								p d 2.898.323
+							.text
+								p
+									strong Tonmg cong
+								p d 2.898.323

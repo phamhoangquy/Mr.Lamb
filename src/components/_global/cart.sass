@@ -1,0 +1,188 @@
+.shopping-cart-toggle
+	display: flex
+	justify-content: center
+	align-items: center
+	position: static
+		
+	@media screen and ( min-width: 1024px)
+		position: relative
+	.item-quantity
+		width: auto !important
+	.ModuleContent
+		@apply flex items-center justify-center 
+		display: flex
+		justify-content: center
+		align-items: center
+	.cart-header
+		display: flex
+	.cart-icon
+	.cart-number
+		margin-left: 2px
+		padding: 2px
+		border-radius: 50%
+		font-size: .75rem
+		color: #333333 
+		display: flex 
+		justify-content: center
+		align-items: center
+		.item-quantity
+			font-size: .75rem
+			color: #333333
+			display: block
+			height: .75rem
+			*
+				font-size: .75rem
+				color: #333333
+			
+			.text
+				@media screen and ( max-width:  1024px)
+					display: none
+					
+.shopping-cart-wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+	padding: 20px
+	background: white
+	position: absolute
+	top: 100%
+	right: 0
+	z-index: 0
+	transition: .3s all  ease-in-out
+	opacity: 0
+	pointer-events: none
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05)
+	width: 370px
+	@media screen and ( max-width: 576px)
+		width: 320px
+	&:hover
+		cursor: pointer
+	&.open
+		pointer-events: auto
+		opacity: 1
+		top: 100%
+		z-index: 50
+	.head
+		border-bottom: 3px solid #ebebeb
+		@apply flex justify-between items-center w-full pb-3
+		display: flex 
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding-bottom: .75rem
+	.cart-quantity
+		display: flex
+		.cart-icon-dark
+			width: 20px
+			height: 20px
+			background-repeat: no-repeat
+			background-position: center
+			background-image: url("data:image/svg+xml;charset=utf-8,<svg viewBox='-35 0 512 512.00102' xmlns='http://www.w3.org/2000/svg' fill='%23333333' width='20px' height='20px'><path d='m443.054688 495.171875-38.914063-370.574219c-.816406-7.757812-7.355469-13.648437-15.15625-13.648437h-73.140625v-16.675781c0-51.980469-42.292969-94.273438-94.273438-94.273438-51.984374 0-94.277343 42.292969-94.277343 94.273438v16.675781h-73.140625c-7.800782 0-14.339844 5.890625-15.15625 13.648437l-38.9140628 370.574219c-.4492192 4.292969.9453128 8.578125 3.8320308 11.789063 2.890626 3.207031 7.007813 5.039062 11.324219 5.039062h412.65625c4.320313 0 8.4375-1.832031 11.324219-5.039062 2.894531-3.210938 4.285156-7.496094 3.835938-11.789063zm-285.285157-400.898437c0-35.175782 28.621094-63.796876 63.800781-63.796876 35.175782 0 63.796876 28.621094 63.796876 63.796876v16.675781h-127.597657zm-125.609375 387.25 35.714844-340.097657h59.417969v33.582031c0 8.414063 6.824219 15.238282 15.238281 15.238282s15.238281-6.824219 15.238281-15.238282v-33.582031h127.597657v33.582031c0 8.414063 6.824218 15.238282 15.238281 15.238282 8.414062 0 15.238281-6.824219 15.238281-15.238282v-33.582031h59.417969l35.714843 340.097657zm0 0'/></svg>")
+	.body
+		@apply w-full pb-8 pt-6
+		width: 100%
+		padding-bottom: 30px
+		padding-top: 25px
+	
+	.btn-center
+		@apply w-full
+		width: 100%
+		.btn
+			height: 40px
+			display: flex
+			justify-content: center
+			align-content: center
+			width: 100%
+			background: #00415f
+			display: flex
+			align-items: center
+			justify-content: center
+			span
+				color: #ffffff
+			em
+				
+				color: #ffffff
+				display: inline-block
+				margin-left: 20px
+				transition: .3s all ease-in-out
+				font-size: 14px
+				height: 14px
+				line-height: 14px
+			&:hover
+				span
+					color: white
+				em
+					transform: translateX(3px)
+	.cart-item
+		display: flex 
+		justify-content: space-between
+		align-items: center
+		background: white
+		padding:  0 0 20px 0
+		margin: 20px 0
+		border-bottom: 1px solid #ebebeb
+		height: 110px
+	
+		&:first-child
+			padding-top: 0
+		
+		*
+			margin-bottom: 0
+		.image
+			a
+				display: block
+				
+				width: 85px
+				img
+					width: 100%
+					height: 100%
+					object-fit: scale-down
+		.caption
+			padding-left: 10px
+			.bottom
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-top: .75rem
+			.title
+				
+				margin-bottom: 0
+				a
+					
+					font-size: 1rem
+					color: #333333
+					margin-bottom: 0
+					line-height: 1.25
+					font-weight: 500
+					transition: .3s all  ease-in-out
+					display: -webkit-box
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					&:hover
+						color: #00415f
+			.price
+				
+				font-size: .875rem
+				color: #00415f
+				font-weight: 700
+				margin-bottom: 0
+			.quantity
+				font-size: .875rem
+				color: #666666
+				font-weight: 500
+				.number
+					font-size: .875rem
+					color: #666666
+					font-weight: 500
+	.sum-price
+		p
+			font-size: .875rem
+			color: #333333
+			margin-bottom: 0
+			font-weight: 500
+			white-space: nowrap
+			span
+				color: #00415f
+				font-size: .875rem

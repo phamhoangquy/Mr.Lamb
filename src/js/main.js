@@ -14,8 +14,14 @@ $(document).ready(function() {
     mappingLogin();
     mappingSearch();
     quantityNumber();
+    toggleShoppingCart();
 });
-
+function toggleShoppingCart() {
+	$(".shopping-cart-toggle").on("click", function (e) {
+		$(".shopping-cart-wrapper").toggleClass("open");
+		e.stopPropagation();
+	});
+}
 // header
 $('.header_btn').click(function() {
     $(this).toggleClass("click");

@@ -1,0 +1,334 @@
+
+
+.btn-primary
+	width: 270px
+	height: 40px
+	border-radius: 5px
+	display: flex
+	justify-content: center
+	align-items: center
+	background: $main
+	padding: 0 20px
+	border: 1px solid transparent
+	transition: .3s all ease-in-out
+	&:hover
+		border-color: $main
+		background: white
+		em,span
+			color: $main
+	em
+		font-size: 16px
+		height: 16px
+		line-height: 16px
+		color: white
+		display: inline-block
+		margin-right: 5px
+	span
+		font-size: 16px
+		color: white
+		text-transform: uppercase
+.btn-gap
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	@media screen and ( max-width: 1024px)
+		margin-bottom: 40px
+	@media screen and ( max-width: 576px)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		.btn
+			width: 100%
+			&:first-child
+				margin-bottom: 20px
+		
+		
+.btn-primary
+	&.grey
+		background: #c2c2c2 !important
+		span
+			color: white !important
+	span
+		font-size: 16px
+		font-weight: 500
+.cart-display
+	padding: 60px 0
+	@media screen and ( max-width: 1024px)
+		background: white
+
+	.total-wrapper
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		flex-direction: column 
+		padding-top: 30px
+		padding-bottom: 40px
+		@media screen and ( max-width: 1024px)
+			justify-content: flex-end
+			padding: 30px
+			align-items: flex-end
+		.total-table
+			@media screen and ( max-width:  1024px)
+				width: 100%
+				text-align: end
+				
+			tr
+				&:nth-child(2)
+					td
+						&:last-child
+							font-weight: 400
+				&:last-child
+					td
+						&:last-child
+							color: $main
+							font-weight: 700
+			td
+				font-size: 20px
+				font-weight: 400
+				color: $main
+				padding: 10px 0
+				&:first-child
+					font-size: 16px
+					color: #999999
+					padding-right: 30px
+					white-space: nowrap
+					width: 120px
+					@media screen and ( min-width: 1024px)
+						padding-right: 40px
+						
+					@media screen and ( max-width: 1024px)
+						text-align: left
+						
+				&:last-child
+					font-size: 20px
+					color: #999999
+		.btn-right
+			padding-top: 40px
+			@media screen and ( max-width: 767px)
+				display: flex 
+				flex-direction: column
+				justify-content: center
+				align-items: flex-start
+				width: 100%
+
+	.wrapper
+		padding-top: 30px
+		@media screen and ( max-width:  1024px)
+			white-space: nowrap
+		@media screen and ( max-width: 576px)
+			white-space: normal
+			
+	.cart-table-wrapper
+		border-radius: 10px
+
+		background: white 
+		overflow: hidden
+		@media screen and ( max-width: 960px)
+			border: 1px solid #d2d2d2
+			
+	.carttable
+		width: 100%
+		position: relative
+		@media screen and ( min-width:  960px)
+			&:before,&:after
+				content: ''
+				display: block
+				position: absolute
+				pointer-events: none
+				z-index: 10
+				background: white
+				transition: .3s all  ease-in-out
+				height: calc( 100% - 50px  )
+				top: 50px
+				width: 30px
+			&:before
+				left: 0
+			&:after
+				right: 0
+				width: 60px
+		.discount
+			color: #999999
+			font-size: 16px
+			font-weight: 500
+			white-space: nowrap
+			text-decoration: line-through
+		.total
+			font-size: 18px
+			color: $main
+			font-weight: 700
+			text-align: center
+			white-space: nowrap
+			@media screen and ( max-width:  960px)
+				text-align: center
+				padding-left: 0
+		thead
+			height: 50px
+			@media screen and ( max-width:960px  )
+				display: none
+			th
+				background: $main
+				height: 50px
+				font-size: 18px
+				color: white
+				text-transform: uppercase
+				font-weight: 700
+				padding: 12px 20px
+				text-align: center
+				&:first-child
+					text-align: left
+					padding-left: 30px
+				&:last-child
+					padding-right: 60px
+		tbody
+			position: relative
+		tr
+			&:last-child
+				td
+					padding-bottom: 30px
+					@media screen and ( max-width:  960px)
+						padding-bottom: 24px
+						&:last-child
+							padding-bottom: 30px
+			@media screen and ( max-width: 960px)
+				border-bottom: 1px solid #d2d2d2
+				
+			td
+				padding: 30px 24px 
+				font-weight: 500
+				border-bottom: 1px solid #ebebeb
+				width: 15%
+				text-align: center
+				@media screen and ( max-width: 960px)
+					border-bottom: 0
+					padding: 0
+					
+				&:first-child
+					width: 45%
+					@media screen and ( max-width: 960px)
+						padding: 0
+					@media screen and ( min-width: 1024px)
+						padding-left: 30px
+				&:last-child
+					@media screen and ( max-width: 960px)
+						padding: 0
+					@media screen and ( min-width: 1024px)
+						padding-right: 60px
+			@media screen and ( max-width:  960px)
+				display: flex
+				flex-direction: column
+				flex-wrap: wrap
+				td
+					display: block
+					padding: 0 20px
+					width: 100%
+					&:first-child
+						width: 100%
+						padding-top: 24px
+					&:nth-child(3),&:nth-child(4)
+						display: inline-block
+					&:last-child
+						padding-bottom: 24px
+						
+	.item-quantity 
+		.input-group
+			border-radius: 5px
+	.product-item
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 0
+		@media screen and ( max-width: 960px)
+			flex-direction: column
+			padding: 0 20px
+			position: relative
+		.image
+			+boxshadow
+			border-radius: 10px
+			@media screen and ( max-width:  960px)
+				width: 100%
+				display: flex 
+				align-items: center
+				justify-content: center
+				box-shadow: none
+				a
+					flex: 1 0 auto
+					+img-ratio(120/140)
+				
+			@media screen and ( min-width: 960.1px)
+				a
+					display: block
+					height: 100px
+					max-width: 140px
+					min-width: 140px
+					width: auto
+					img
+						width: 100%
+						height: 100%
+						object-fit: contain
+		.caption
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: flex-start
+			margin-bottom: 0
+			height: 100%
+			height: 100px
+			@media screen and ( max-width:  960px)
+				margin: 0
+				height: auto
+			.title
+				margin-bottom: 0
+				a
+					font-size: 16px
+					color: #333333
+					display: block
+					margin-bottom: 4px
+					font-weight: 500
+					text-transform: uppercase
+					@media screen and ( max-width:  960px)
+						margin: 16px 0
+						text-align: center
+						
+			.remove-item
+				display: flex 
+				align-items: center
+				justify-content: flex-start
+				@media screen and ( max-width:  960px)
+					position: absolute
+					top: 0
+					right: 20px
+				em
+					color: #666666
+					display: block
+					margin-right: 8px
+					font-size: 16px
+					height: 16px
+					line-height: 16px
+				span
+					color: #666666
+					font-size: 14px
+	.quantity-wrapper  
+		@media screen and ( max-width:  1024px)
+			@apply pt-0 pb-2
+			
+		.item-quantity 
+			height: 40px
+			border-radius: 5px
+			input
+				height: 35px
+			.input-group-btn
+				height: 38px
+		.qty-minus,.qty-plus
+			background: #ffffff
+			&:hover
+				background: none
+		.qty-minus
+			border-top-left-radius: 5px
+			border-bottom-left-radius: 5px
+		.qty-plus
+			border-top-right-radius: 5px
+			border-bottom-right-radius: 5px
