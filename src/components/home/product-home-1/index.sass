@@ -3,6 +3,8 @@
 	.slide-product
 		position: relative
 		padding-top: 60px
+		@media screen and ( max-width: 1024.98px )
+			padding-top: 30px
 		@media screen and ( max-width: 576px )
 			padding-top: 30px
 		.nav-arrow-prev,.nav-arrow-next
@@ -20,11 +22,15 @@
 			&:hover
 				color: #00415f
 		.nav-arrow-next
-			right: 0
+			right: -40px
+			@media screen and ( max-width: 1024.98px )
+				right: 0
 			@media screen and ( max-width: 576px)
 				right: -10px
 		.nav-arrow-prev
-			left: 0
+			left: -40px
+			@media screen and ( max-width: 1024.98px )
+				left: 0
 			@media screen and ( max-width: 576px)
 				left: -10px
 		.swiper-container
@@ -84,3 +90,4 @@
 						.price
 							p
 								color: #00415f
+
