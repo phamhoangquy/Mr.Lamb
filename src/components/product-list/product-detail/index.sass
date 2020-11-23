@@ -1,7 +1,51 @@
+.product-detail-page
+	.pagination,.productdetailpager
+		display: none
 .block_product-detail
 	padding-top: 70px
 	@media screen and ( max-width: 576px )
 		padding-top: 30px
+	.product-attributes
+		.title_description
+			text-align: left
+			justify-content: flex-start
+	.btn-wrap-gap
+		width: 100%
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 576px)
+			flex-direction: column
+			
+		.item-quantity
+			margin-left: 15px
+			width: 160px
+			@media screen and ( max-width: 576px)
+				margin-left: 80px
+				
+			.input-group 
+				justify-content: space-between
+				input
+					width: 80px !important
+		.center
+			align-items: flex-start
+		.item-quantity
+			padding-right: 0 !important
+		.title_description,.content_number
+			width: auto !important
+		.title_description
+			display: flex
+			justify-content: space-between
+			align-items: center
+			@media screen and ( max-width: 576px)
+				justify-content: flex-start
+				
+		p
+			padding-right: 15px !important
+		.add-to-card
+			margin: 0 !important
+			@media screen and ( max-width: 576px)
+				margin-top: 30px !important
+				
 	.swiper-product-wrapper
 		display: flex
 		justify-content: center
@@ -198,53 +242,46 @@
 				display: flex
 				list-style: none
 				li
-					.size
-						display: flex
-						justify-content: center
-						align-items: center
-						width: 30px
-						height: 30px
-						border: 1px solid #999999
-						margin-right: 10px
-						font-size: 12px
+					a
+						display: flex !important 
+						justify-content: center !important
+						align-items: center !important
+						width: 30px !important
+						height: 30px !important
+						border: 1px solid #999999 !important
+						margin-right: 10px !important
+						font-size: 12px !important
+						color: #999999 !important
 						&:hover
-							border: 1px solid #00415f
-							color: #00415f
-							cursor: pointer
+							border: 1px solid #00415f !important
+							color: #00415f !important
+							cursor: pointer !important
 					.active
-						border: 1px solid #00415f
-						color: #00415f
+						a
+							border: 1px solid #00415f !important
+							color: #00415f !important
 		.content_color
 			width: 69%
 			ul
 				display: flex
 				list-style: none
 				li
-					width: 30px
-					height: 30px
+					width: 30px !important
+					height: 30px !important
 					margin-right: 15px
 					border-radius: 50%
 					display: flex
 					align-items: center
 					justify-content: center
 					cursor: pointer
-					&:nth-child(1)
-						.color
-							background-color: #cb5e13
-					&:nth-child(2)
-						.color
-							background-color: #091857
-					&:nth-child(3)
-						.color
-							background-color: #570909
-					.color
-						width: 20px
-						height: 20px
-						background-color: #cb5e13
+					border: 1px solid transparent
+					&.active
+						border-color: $main
+					a
 						border-radius: 50%
-						padding: 10px
-				.active
-					border: 1px solid #074663
+						width: 20px !important
+						height: 20px !important
+					
 		.content_number
 			width: 69%
 			.add-to-card
@@ -471,7 +508,7 @@
 .block_product-detail-3
 	padding: 55px 0 90px 0
 	@media screen and ( max-width: 576px )
-		padding: 30px 0 30px 0
+		padding: 30px 0 15px 0
 	.product-related-swiper-wrapper
 		position: relative
 		padding-top: 15px

@@ -74,7 +74,7 @@
 							<div class="language-wrapper">
 								<portal:ModuleWrapper ID="mdl252" runat="server" ConfigureModuleId="252" />
 							</div>
-							<div class="cart"><em class="fas fa-shopping-cart"></em></div>
+							<portal:ModuleWrapper ID="mdl270" runat="server" ConfigureModuleId="270" />
 							<div class="moblie-toggle"><em class="header_btn fal fa-bars"></em></div>
 						</div>
 					</div>

@@ -4,12 +4,21 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="EN">
-			<xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
+		<div class="nav-wrapper">
+			<ul class="nav-menu">
+				<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+			</ul>
 		</div>
 	</xsl:template>
-	<xsl:template match="Language">
-		<xsl:if test="IsActive='false'">
+
+	<xsl:template match="Zone">
+		<li>
+
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="class">
+					<xsl:text>active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
 			<a>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
@@ -19,7 +28,7 @@
 				</xsl:attribute>
 				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 			</a>
-		</xsl:if>
-	</xsl:template>
 
+		</li>
+	</xsl:template>
 </xsl:stylesheet>

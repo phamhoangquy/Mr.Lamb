@@ -4,12 +4,26 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="EN">
-			<xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
+		<div class="left-support">
+			<div class="title-sp">
+				<h2>
+					<xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of>
+				</h2>
+			</div>
+			<div class="content-sp">
+				<ul>
+					<xsl:apply-templates select="/ZoneList/Zone/Zone"></xsl:apply-templates>
+				</ul>
+			</div>
 		</div>
 	</xsl:template>
-	<xsl:template match="Language">
-		<xsl:if test="IsActive='false'">
+	<xsl:template match="Zone">
+		<li>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="class">
+					<xsl:text>active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
 			<a>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
@@ -19,7 +33,7 @@
 				</xsl:attribute>
 				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 			</a>
-		</xsl:if>
+		</li>
 	</xsl:template>
 
 </xsl:stylesheet>

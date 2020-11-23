@@ -3,13 +3,13 @@
 	justify-content: center
 	align-items: center
 	position: static
-		
+	.cart-body
+		width: 100%
 	@media screen and ( min-width: 1024px)
 		position: relative
 	.item-quantity
 		width: auto !important
 	.ModuleContent
-		@apply flex items-center justify-center 
 		display: flex
 		justify-content: center
 		align-items: center
@@ -25,6 +25,9 @@
 		display: flex 
 		justify-content: center
 		align-items: center
+		@media screen and ( max-width: 1024px)
+			margin-bottom: 5px
+			
 		.item-quantity
 			font-size: .75rem
 			color: #333333
@@ -33,11 +36,6 @@
 			*
 				font-size: .75rem
 				color: #333333
-			
-			.text
-				@media screen and ( max-width:  1024px)
-					display: none
-					
 .shopping-cart-wrapper
 	display: flex
 	flex-direction: column
@@ -160,6 +158,7 @@
 					-webkit-line-clamp: 2
 					-webkit-box-orient: vertical
 					overflow: hidden
+					text-align: left
 					&:hover
 						color: #00415f
 			.price
