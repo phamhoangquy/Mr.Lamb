@@ -5,6 +5,7 @@
 			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
 			padding: 0
 			height: 435px
+			border-radius: 10px
 			@media screen and ( max-width: 1024.98px )
 				margin: 0 30px
 				height: auto
@@ -22,6 +23,7 @@
 				box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
 				background: #ffffff
 				padding: 25px
+				border-radius: 10px
 				.postname
 					padding-left: 10px
 					@media screen and ( max-width: 576px )
@@ -91,7 +93,13 @@
 							padding-left: 15px
 				.button-wrap
 					input
-						border: 1px solid #e0e0e0
+						border: 1px solid #00415f
 						padding: 10px
 						display: flex
 						margin-top: 15px
+						background: #00415f
+						color: #ffffff
+						&:hover
+							background: none
+							border: 1px solid #00415f
+							color: #00415f

@@ -292,10 +292,21 @@
 #ctl00_mainContent_login1_LoginCtrl_lnkPasswordRecovery,#ctl00_mainContent_login1_LoginCtrl_lnkRegisterExtraLink
 	display: none
 
+// page login
+.loginpage
+	.form-group
+		#ctl00_mainContent_login1_LoginCtrl_RememberMe
+			display: none
+
+
+// page signup
 .t-chrome.t-chrome86
 	.signup-panel
 		padding: 50px 0
 		.signup-form
+			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
+			padding: 50px
+			border-radius: 10px
 			#ctl00_mainContent_pnlRegisterWrapper
 				margin-top: 10px
 				.form-horizontal
@@ -316,3 +327,9 @@
 							padding: 10px 10px
 							border: 1px solid #e0e0e0
 							margin-top: 15px
+							background: #00415f
+							color: #ffffff
+							&:hover
+								background: none
+								border: 1px solid #00415f
+								color: #00415f

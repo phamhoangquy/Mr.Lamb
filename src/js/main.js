@@ -61,30 +61,6 @@ function toggleSupportClient() {
     }
 
 }
-// toggle support
-function toggleSupport() {
-    $(".toggle-item > .title").click(function(e) {
-        e.preventDefault();
-        if (!$(this)
-            .parent()
-            .hasClass("active")
-        ) {
-            $(".toggle-item .article").slideUp();
-            $(this)
-                .next()
-                .slideToggle();
-            $(".toggle-item").removeClass("active");
-            $(this)
-                .parent()
-                .addClass("active");
-        } else {
-            $(this)
-                .next()
-                .slideToggle();
-            $(".toggle-item").removeClass("active");
-        }
-    });
-}
 
 function showBackToTop() {
     $(window).scroll(function() {
@@ -501,13 +477,6 @@ function watchMoreDetail() {
             });
         }
     });
-    // cotent.each(function() {
-    //     console.log(cotent.height())
-
-    //     if (cotent.height() < maxHeight) {
-    //         $(this).find('.btn-view-more').hide()
-    //     }
-    // })
 }
 
 function mappingMenu() {
@@ -549,9 +518,9 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.querySelector(".banner_header").style.display = "none";
+        document.querySelector("header").style.top = "-50px";
     } else {
-        document.querySelector(".banner_header").style.display = "unset";
+        document.querySelector("header").style.top = "0";
     }
 }
 
@@ -571,23 +540,5 @@ function quantityNumber() {
         console.log('bottom')
         console.log(plus)
         $(this).parents('.input-group').find('input').val(plus + 1);
-    });
-}
-
-function setBackground() {
-    $("[setBackground]").each(function() {
-        var background = $(this).attr("setBackground");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-size": "cover",
-            "background-position": "center center",
-        });
-    });
-    $("[setBackgroundRepeat]").each(function() {
-        var background = $(this).attr("setBackgroundRepeat");
-        $(this).css({
-            "background-image": "url(" + background + ")",
-            "background-repeat": "repeat",
-        });
     });
 }
