@@ -7,7 +7,7 @@
 		<div class="cart-header">
 			<div class="cart-icon"></div>
 			<div class="cart-number">
-				<div class="item-quantity"><span class="icon"><em class='ri-shopping-cart-line'></em> </span><span
+				<div class="item-quantity"><span class="icon"><em class="fas fa-shopping-cart"></em> </span><span
 						class="number quantity-number">
 						<xsl:value-of select="/ShoppingCart/TotalProducts" disable-output-escaping="yes"></xsl:value-of>
 					</span></div>
