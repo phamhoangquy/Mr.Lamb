@@ -518,7 +518,7 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.querySelector("header").style.top = "-50px";
+        document.querySelector("header").style.top = "-35px";
     } else {
         document.querySelector("header").style.top = "0";
     }
