@@ -525,7 +525,6 @@ function scrollFunction() {
 }
 
 function quantityNumber() {
-<<<<<<< HEAD
     $(".qty-minus").click(function() {
         let minus = $(this).parents('.input-group').find('input').val();
         console.log('top')
@@ -563,42 +562,3 @@ function setBackground() {
         });
     });
 }
-=======
-	$(".qty-minus").click(function () {
-		let minus = $(this).parents('.input-group').find('input').val();
-		console.log('top')
-		console.log(minus)
-		if (minus > 0) {
-			$(this).parents('.input-group').find('input').val(minus - 1);
-		} else {
-			$(this).parents('.input-group').find('input').val(0);
-		}
-		AjaxCart.updatecart()
-	});
-	$(".qty-plus").on("click", function () {
-		let plus = Number($(this).parents('.input-group').find('input').val());
-		console.log('bottom')
-		console.log(plus)
-		$(this).parents('.input-group').find('input').val(plus + 1);
-		AjaxCart.updatecart()
-	});
-}
-
-function setBackground() {
-	$("[setBackground]").each(function () {
-		var background = $(this).attr("setBackground");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-size": "cover",
-			"background-position": "center center",
-		});
-	});
-	$("[setBackgroundRepeat]").each(function () {
-		var background = $(this).attr("setBackgroundRepeat");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-repeat": "repeat",
-		});
-	});
-}
->>>>>>> cce9854fe977d4cb2459a7d1e73bcc7eabc2033e
