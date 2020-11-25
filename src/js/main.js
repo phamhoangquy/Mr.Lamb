@@ -567,12 +567,14 @@ function quantityNumber() {
 		} else {
 			$(this).parents('.input-group').find('input').val(0);
 		}
+		AjaxCart.updatecart()
 	});
 	$(".qty-plus").on("click", function () {
 		let plus = Number($(this).parents('.input-group').find('input').val());
 		console.log('bottom')
 		console.log(plus)
 		$(this).parents('.input-group').find('input').val(plus + 1);
+		AjaxCart.updatecart()
 	});
 }
 

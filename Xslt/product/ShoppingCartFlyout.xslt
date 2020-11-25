@@ -7,9 +7,10 @@
 		<div class="cart-header">
 			<div class="cart-icon"></div>
 			<div class="cart-number">
-				<div class="item-quantity"><span class="text">Giỏ hàng (</span><span class="number quantity-number">
+				<div class="item-quantity"><span class="icon"><em class='ri-shopping-cart-line'></em> </span><span
+						class="number quantity-number">
 						<xsl:value-of select="/ShoppingCart/TotalProducts" disable-output-escaping="yes"></xsl:value-of>
-					</span>)</div>
+					</span></div>
 
 			</div>
 		</div>
@@ -42,7 +43,7 @@
 					<div class="btn-center">
 						<a class="btn btn-primary">
 							<xsl:attribute name="href">
-								<xsl:value-of select="/ShoppingCart/CheckoutUrl"></xsl:value-of>
+						<xsl:text>/cart</xsl:text>
 							</xsl:attribute>
 							<span>Thanh toán </span>
 							<em class="fas fa-chevron-right"></em>
@@ -51,50 +52,7 @@
 				</xsl:if>
 			</div>
 		</div>
-		<!--<a class="cart-toggle" href="#">
-			<span class="lnr lnr-cart"></span>
-			<small class="uk-badge">
-				<xsl:text disable-output-escaping="yes">(</xsl:text>
-				<span class="cart-amount">
-					<xsl:value-of select="/ShoppingCart/TotalProducts" disable-output-escaping="yes">
-					</xsl:value-of>
-				</span>
-				<xsl:text disable-output-escaping="yes">)</xsl:text>
-			</small>
-		</a>
-		<div class="uk-dropdown" uk-dropdown="pos: bottom-right">
-			<div class="shopping-cart">
-				<div class="shopping-cart-header">
-					<i class="lnr lnr-cart cart-icon"></i>
-					<span class="badge cart-amount">
-						<xsl:value-of select="/ShoppingCart/TotalProducts" disable-output-escaping="yes">
-						</xsl:value-of>
-					</span>
-					<div class="shopping-cart-total">
-						<span class="lighter-text">Total:</span>
-						<span class="main-color-text">
-							<xsl:value-of select="/ShoppingCart/Total"></xsl:value-of>
-						</span>
-					</div>
-				</div>
-				<xsl:if test="count(/ShoppingCart/CartItem)>0">
-					<ul class="shopping-cart-items">
-						<xsl:apply-templates select="/ShoppingCart/CartItem"></xsl:apply-templates>
-					</ul>
-				</xsl:if>
-
-				<xsl:if test="count(/ShoppingCart/CartItem)=0">
-				<p class="uk-text-center" style="color: #999;">No products in the cart.</p>
-			</xsl:if>
-
-				<a href="#" class="button">
-					<xsl:attribute name="href">
-						<xsl:value-of select="/ShoppingCart/CartPageUrl"></xsl:value-of>
-					</xsl:attribute>
-					Checkout
-				</a>
-			</div>
-		</div>-->
+	
 	</xsl:template>
 
 	<xsl:template match="CartItem" mode="LastAddedItem">
