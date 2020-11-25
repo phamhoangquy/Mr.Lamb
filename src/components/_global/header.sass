@@ -1,25 +1,16 @@
 header
 	position: fixed
 	width: 100%
-	z-index: 10
 	background-color: #fff
+	z-index: 10
+	transition: .3s all ease-in-out
 	.banner_header
+		z-index: 10
+		transition: top 0.3s
 		.img
 			img
 				width: 100%
-				transition: ease-in-out all .3s
-		@media screen and ( max-width: 1024px )
-			display: none !important
-		// .close-btn
-		// 	position: absolute
-		// 	top: 0
-		// 	right: 0
-		// 	font-size: 30px
-		// 	background-color: #fbbf33
-		// 	padding: 0 8px
-		// 	color: #fff
-		// 	cursor: pointer
-		// 	z-index: 10
+				transition: .3s all ease-in-out
 	.header_top
 		height: 120px
 		display: flex
@@ -36,6 +27,10 @@ header
 				order: 1
 			a
 				width: 100%
+				height: 75px
+				img
+					width: 100%
+					height: 100%
 				@media screen and ( max-width: 1280px )
 					img,svg
 						max-width: 100%
@@ -78,6 +73,8 @@ header
 		button
 			border: 0
 			background-color: unset
+			em
+				font-size: 12px
 	.block_login
 		display: flex
 		@media screen and ( max-width: 1280px )
@@ -156,23 +153,14 @@ header
 				position: relative
 				@media screen and ( max-width: 1280px )
 					color: #000
-				// &:after
-				// 	position: absolute
-				// 	bottom: -5px
-				// 	left: 0
-				// 	right: 0
-				// 	margin: auto
-				// 	width: 0%
-				// 	content: ''
-				// 	color: transparent
-				// 	background: #00415f
-				// 	height: 2px
-				// 	transition: all .2s
-				// 	@media screen and ( max-width: 1092px )
-				// 		background: #000
-				// &:hover
-				// 	&:after
-				// 		width: 100%
+			&:hover
+				a
+					background: #00415f
+					padding: 15px
+			&.active
+				a
+					background: #00415f
+					padding: 15px
 
 	.menu_mobile
 		width: 50%
@@ -207,6 +195,16 @@ header
 			width: 100%
 			// height: 100%
 			justify-content: center
+			.nav-menu
+				li
+					position: relative
+					margin-bottom: 10px
+					&.active
+						border-bottom: 1px solid #00415f
+						padding-bottom: 5px
+						a
+							color: #00415f
+							background: none
 	.menu_mobile.show
 		opacity: 1
 		pointer-events: auto
