@@ -139,23 +139,23 @@
 	.carttable
 		width: 100%
 		position: relative
-		@media screen and ( min-width:  960px)
-			&:before,&:after
-				content: ''
-				display: block
-				position: absolute
-				pointer-events: none
-				z-index: 10
-				background: white
-				transition: .3s all  ease-in-out
-				height: calc( 100% - 50px  )
-				top: 50px
-				width: 30px
-			&:before
-				left: 0
-			&:after
-				right: 0
-				width: 60px
+		// @media screen and ( min-width:  960px)
+		// 	&:before,&:after
+		// 		content: ''
+		// 		display: block
+		// 		position: absolute
+		// 		pointer-events: none
+		// 		// z-index: 10
+		// 		background: white
+		// 		transition: .3s all  ease-in-out
+		// 		height: calc( 100% - 50px  )
+		// 		top: 50px
+		// 		width: 30px
+		// 	&:before
+		// 		left: 0
+		// 	&:after
+		// 		right: 0
+		// 		width: 60px
 		.discount
 			color: #999999
 			font-size: 16px
@@ -242,6 +242,7 @@
 	.item-quantity 
 		.input-group
 			border-radius: 5px
+			display: flex
 	.product-item
 		display: flex
 		flex-direction: row
@@ -322,14 +323,21 @@
 	.quantity-wrapper  
 		@media screen and ( max-width:  1024px)
 			@apply pt-0 pb-2
-			
+		background: #e0e0e0
+		border-radius: 10px
+		padding: 0 10px
 		.item-quantity 
 			height: 40px
 			border-radius: 5px
 			input
 				height: 35px
+				width: 100%
+				text-align: center
+				background: none
+				border: none
 			.input-group-btn
 				height: 38px
+				display: flex
 		.qty-minus,.qty-plus
 			background: #ffffff
 			&:hover
@@ -337,7 +345,39 @@
 		.qty-minus
 			border-top-left-radius: 5px
 			border-bottom-left-radius: 5px
+			background: none
+			border: none
+			display: flex
+			justify-content: center
+			align-items: center
 		.qty-plus
 			border-top-right-radius: 5px
 			border-bottom-right-radius: 5px
+			background: none
+			border: none
+			display: flex
+			justify-content: center
+			align-items: center
+
+.cart-header
+	position: relative
+	.cart-number
+		.item-quantity
+			.number
+				position: absolute
+				bottom: 6px
+				right: -6px
+				text-align: center
+				color: #ffffff
+				width: 15px
+				height: 15px
+				background: #e82429
+				border-radius: 50%
+				font-size: 11px
+				@media screen and ( max-width: 1024.98px )
+					bottom: 12px
+				@media screen and ( max-width: 998.98px )
+					bottom: 12px
+				@media screen and ( max-width: 576px )
+					bottom: 12px
 

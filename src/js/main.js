@@ -518,47 +518,49 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.querySelector("header").style.top = "-35px";
+        document.querySelector("header").style.top = "-65px";
     } else {
         document.querySelector("header").style.top = "0";
     }
 }
 
+
+
 function quantityNumber() {
-	$(".qty-minus").click(function () {
-		let minus = $(this).parents('.input-group').find('input').val();
-		console.log('top')
-		console.log(minus)
-		if (minus > 0) {
-			$(this).parents('.input-group').find('input').val(minus - 1);
-		} else {
-			$(this).parents('.input-group').find('input').val(0);
-		}
-		AjaxCart.updatecart()
-	});
-	$(".qty-plus").on("click", function () {
-		let plus = Number($(this).parents('.input-group').find('input').val());
-		console.log('bottom')
-		console.log(plus)
-		$(this).parents('.input-group').find('input').val(plus + 1);
-		AjaxCart.updatecart()
-	});
+    $(".qty-minus").click(function() {
+        let minus = $(this).parents('.input-group').find('input').val();
+        console.log('top')
+        console.log(minus)
+        if (minus > 0) {
+            $(this).parents('.input-group').find('input').val(minus - 1);
+        } else {
+            $(this).parents('.input-group').find('input').val(0);
+        }
+        AjaxCart.updatecart()
+    });
+    $(".qty-plus").on("click", function() {
+        let plus = Number($(this).parents('.input-group').find('input').val());
+        console.log('bottom')
+        console.log(plus)
+        $(this).parents('.input-group').find('input').val(plus + 1);
+        AjaxCart.updatecart()
+    });
 }
 
 function setBackground() {
-	$("[setBackground]").each(function () {
-		var background = $(this).attr("setBackground");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-size": "cover",
-			"background-position": "center center",
-		});
-	});
-	$("[setBackgroundRepeat]").each(function () {
-		var background = $(this).attr("setBackgroundRepeat");
-		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-repeat": "repeat",
-		});
-	});
+    $("[setBackground]").each(function() {
+        var background = $(this).attr("setBackground");
+        $(this).css({
+            "background-image": "url(" + background + ")",
+            "background-size": "cover",
+            "background-position": "center center",
+        });
+    });
+    $("[setBackgroundRepeat]").each(function() {
+        var background = $(this).attr("setBackgroundRepeat");
+        $(this).css({
+            "background-image": "url(" + background + ")",
+            "background-repeat": "repeat",
+        });
+    });
 }
