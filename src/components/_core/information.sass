@@ -1,16 +1,7 @@
 .userprofilepage
 	.middle-fullwidth
-		padding: 50px 0
-		.col-lg-3
-			box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
-			padding: 0
-			height: 435px
-			border-radius: 10px
-			@media screen and ( max-width: 1024.98px )
-				margin: 0 30px
-				height: auto
-			@media screen and ( max-width: 576px )
-				height: auto
+		padding: 80px 0 50px 0
+		background: #f8f8f8
 		.col-lg-9
 			padding-left: 30px
 			@media screen and ( max-width: 1024.98px )
@@ -20,39 +11,59 @@
 				padding-right: 30px
 				margin-top: 30px
 			.user-page
-				box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
 				background: #ffffff
 				padding: 25px
 				border-radius: 10px
 				.postname
 					padding-left: 10px
+					font-size: 1.5rem
 					@media screen and ( max-width: 576px )
-						font-size: 26px
+						font-size: 20px
 				.row
 					display: flex
 					justify-content: left
 					padding-left: 30px
 					@media screen and ( max-width: 576px )
 						padding-left: 0
+					.col-xs-12
+						width: 100%
+						padding-right: 25px
+						@media screen and ( max-width: 1024.98px )
+							width: auto
+						@media screen and ( max-width: 576px )
+							width: auto
 						
 		.userinfo
+			margin-bottom: 30px
+			@media screen and ( max-width: 576px )
+				padding: 0 15px
 			figure
-				background: #eee
-				padding: 10px 45px
+				background: #ffffff
+				padding: 30px
+				border-radius: 10px
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					border-radius: 50%
 				figcaption
+					padding-left: 20px
 					.title
 						font-size: 18px
-						color: #333333
-						font-weight: 700
+						color: #00415f
+						font-weight: 500
 						padding: 5px 0
 					.user-name
 						font-size: 18px
-						color: #333333
+						color: #00415f
 						font-weight: 700
 		.user-sidelink
+			@media screen and ( max-width: 576px )
+				padding: 0 15px
 			ul
 				list-style: none
 				padding: 10px 45px
+				border-radius: 10px
 				@media screen and ( max-width: 576px )
 					padding: 10px 35px
 				background: #ffffff
@@ -65,20 +76,30 @@
 					a
 						color: #333333
 						font-size: 1rem
-						font-weight: 600
 					&:hover
+						a
+							color: #00415f
+							font-weight: 600
+					&.active
 						a
 							color: #00415f
 							font-weight: 600
 
 		.user-page
+			.coin-info
+				padding: 25px 0
 			.account-info
+				padding: 25px 0
 				@media screen and ( max-width: 576px )
 					padding: 25px
 				.posttitle
-					display: none
+					font-size: 20px
+					font-weight: 400
+				a
+					font-size: 14px
 				.account-form
 					.form-group
+						padding-right: 25px
 						label
 							margin: 10px 0
 						input
@@ -103,3 +124,30 @@
 							background: none
 							border: 1px solid #00415f
 							color: #00415f
+				.info-detail
+					.group
+						display: flex
+						padding-top: 10px
+						.label
+							color: #787878
+							padding-right: 15px
+			.cart-history
+				display: flex
+				justify-content: space-between
+				padding: 25px 0
+				.posttitle
+					font-size: 20px
+					font-weight: 400
+				a
+					font-size: 14px
+			.address-info
+				.posttitle
+					font-size: 20px
+					font-weight: 400
+				a
+					font-size: 14px
+				.address-list
+					.address-col
+						.address
+							display: flex
+							justify-content: space-between

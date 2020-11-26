@@ -283,7 +283,7 @@ function swiperInit() {
                     direction: "vertical"
                 },
                 1440: {
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                     direction: "vertical"
                 }
             },

@@ -32,7 +32,6 @@
 					font-size: 16px
 		.side-navigation
 			list-style-type: none
-			// box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.03)
 			margin: 0
 			padding: 0
 			transition: .3s all  ease-in-out
@@ -55,8 +54,6 @@
 							cursor: pointer
 					.nav-sub
 						display: block
-					.nav-sub-2
-						display: none
 				&:last-child
 					.title
 						// border-bottom: 0
@@ -92,7 +89,6 @@
 					padding: 0 20px
 					background-color: #f9f9f9
 					li
-						
 						&:last-child
 							a
 								padding-bottom: 20px
@@ -133,6 +129,11 @@
 								&.active
 									color: #00415f
 									font-weight: 600
+						.nav-sub-2
+							display: none
+						&.open 
+							.nav-sub-2
+								display: block
 				.nav-sub-2
 					list-style: none
 					padding: 0
