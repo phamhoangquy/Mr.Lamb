@@ -22,6 +22,8 @@
 	ShowAttribute="true"
     ShowSubtitle="true"
     ShowAttachment="true"
+	ShowRelatedProduct="true"
+    ShowRelatedProduct2="false"
 	/>
 <portal:DealerDisplaySettings runat="server" 
 	ShowDescription="true"
@@ -31,6 +33,8 @@
     ShowProductCode="true"
     ShowSubTitle="true"
     ShowRelatedProduct="true"
+	ShowMultipleZones="true"
+	ShowStockQuantity="true"
 	/>
 <portal:SharedFilesDisplaySettings runat="server" 
 	ShowFolder="false"
