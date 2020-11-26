@@ -42,16 +42,12 @@
 						</div>
 						<xsl:if test="ShowOption > 0">
 							<div class="promotion">
-								<xsl:if test="floor(ShowOption div 4) mod 2 = 1">
-									<div class="discount"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
-									</div>
-								</xsl:if>
 								<xsl:if test="floor(ShowOption div 2) mod 2 = 1">
 									<div class="sale"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
 									</div>
 								</xsl:if>
 								<xsl:if test="floor(ShowOption div 1) mod 2 = 1">
-									<div class="hot"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
+									<div class="hot"><img src="/Data/Sites/1/media/img/product/new.png" alt="" />
 									</div>
 								</xsl:if>
 							</div>
@@ -102,16 +98,12 @@
 						</xsl:attribute>
 						<xsl:if test="ShowOption > 0">
 							<div class="promotion">
-								<xsl:if test="floor(ShowOption div 4) mod 2 = 1">
-									<div class="discount"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
-									</div>
-								</xsl:if>
 								<xsl:if test="floor(ShowOption div 2) mod 2 = 1">
 									<div class="sale"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
 									</div>
 								</xsl:if>
 								<xsl:if test="floor(ShowOption div 1) mod 2 = 1">
-									<div class="hot"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
+									<div class="hot"><img src="/Data/Sites/1/media/img/product/new.png" alt="" />
 									</div>
 								</xsl:if>
 							</div>
