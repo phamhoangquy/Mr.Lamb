@@ -1,8 +1,21 @@
+$primary-color : #00415f
+	
+	
+	
 .checkout-order
 	background: #f8f8f8
 	padding: 100px 0 60px
 	@media screen and ( max-width: 1024px)
 		background: white
+	.term-service-wrap
+		.qcheckbox
+			position: relative
+		#PaymentAgree-error
+			position: absolute
+			bottom: 5px
+			left: 0
+			font-size: 13px
+			color: red
 	.Module-275
 		margin-bottom: 30px
 		box-shadow: 0 0 13px 0 rgba(0,0,0,.09)
@@ -28,12 +41,16 @@
 				display: none
 		.form-phone
 			position: relative
-			margin-bottom: 40px !important
+			margin-bottom: 20px
+			@media screen and ( min-width: 1024px)
+				margin-bottom: 40px !important
 			span
-				position: absolute
-				bottom: -35px
-				left: 200px
 				font-size: 13px
+				@media screen and ( min-width: 1024px)
+					position: absolute
+					bottom: -35px
+					left: 200px
+					font-size: 13px
 
 		hr
 			display: block
@@ -55,6 +72,9 @@
 				font-size: 16px
 				color: #333333
 				font-weight: 500
+				@media screen and ( max-width: 1024px)
+					width: 100%
+					
 				&.error
 					position: absolute
 					font-size: 12px
@@ -139,7 +159,7 @@
 			@media screen and ( min-width: 1280px)
 				padding-left: 0 40px
 		.checkout-title
-			background: $main
+			background: $primary-color
 			margin-bottom: 30px
 			height: 50px
 			h3
@@ -181,7 +201,7 @@
 		margin-bottom: 30px
 		background: white
 		.title-wrap
-			background: $main
+			background: $primary-color
 			margin-bottom: 30px
 			height: 50px
 			.text
@@ -239,7 +259,7 @@
 				width: auto
 				min-width: auto
 		.btn-edit
-			color: $main
+			color: $primary-color
 			text-decoration: underline
 			height: auto
 			margin-top: 0
@@ -279,7 +299,7 @@
 		.btn
 			&.red
 				&:hover
-					background: $main
+					background: $primary-color
 					*
 						color: white
 			&.grey
@@ -308,10 +328,10 @@
 		margin-bottom: 20px
 		&:hover
 			label
-				border-color: $main
+				border-color: $primary-color
 			.image-wrapper
 				a
-					border-color: $main
+					border-color: $primary-color
 		input
 			background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d9d9d9' width='20px' height='20px'><path d='M0 0h24v24H0z' fill='none'/><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/></svg>")
 			&:checked
@@ -335,9 +355,6 @@
 				padding-bottom: 20px
 		.image-wrapper
 			padding: 20px 0
-			@media screen and ( max-width: 576px)
-				border-right: 0
-				
 			a
 				display: flex
 				justify-content: center
@@ -348,6 +365,8 @@
 				max-width: 100px
 				min-width: 100px
 				width: auto
+				@media screen and ( max-width: 576px)
+					border-right: 0
 				img
 					max-width: 100%
 					height: auto
@@ -400,17 +419,17 @@
 					&:nth-child(2)
 						font-weight: 700
 						font-size: 18px
-						color: $main
+						color: $primary-color
 			&:last-child
 				border-top: 1px solid #ebebeb
 				padding: 16px 0
 				margin-top: 16px
 				p
 					&:nth-child(2)
-						color: $main
+						color: $primary-color
 			p 
 				font-size: 20px
-				color: $main
+				color: $primary-color
 				strong
 					font-size: 16px
 					color: #666666
@@ -431,9 +450,9 @@
 		a
 			em
 				font-size: 18px
-				color: $main
+				color: $primary-color
 				height: 22px
-				border-bottom: 3px solid $main
+				border-bottom: 3px solid $primary-color
 	.item
 		display: flex
 		justify-content: space-between
@@ -505,11 +524,11 @@
 					-webkit-box-orient: vertical
 					overflow: hidden
 					&:hover
-						color: $main
+						color: $primary-color
 				.price
 					font-size: 16px
 					font-weight: 7000
-					color: $main
+					color: $primary-color
 					white-space: nowrap
 					@media screen and ( max-width: 576px)
 						padding-top: 5px
