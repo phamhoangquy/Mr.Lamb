@@ -1,19 +1,21 @@
 *
-    padding: 0
-    margin: 0
-    box-sizing: border-box
-    &:focus
-        outline: none !important
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	&:focus
+		outline: none !important
 body
-    font-size: 16px
+	font-size: 16px
 main
-    padding-top: 205px
-    @media screen and ( max-width: 1024.98px )
-        padding-top: 80px
-    @media screen and ( max-width: 576px )
-        padding-top: 80px
+	padding-top: 205px
+	@media screen and ( max-width: 1280px )
+		padding-top: 0
+	@media screen and ( max-width: 1024.98px )
+		padding-top: 80px
+	@media screen and ( max-width: 576px )
+		padding-top: 80px
 .container
-    max-width: 1230px
+	max-width: 1230px
 
 .center
 	display: flex
@@ -36,17 +38,17 @@ main
 	align-items: center
 	justify-content: space-between
 
+
+// account
 .account-wrapper
 	display: flex
 	align-items: center
-
 	.wrap
 		display: flex
-		flex-direction: column
 		justify-content: center
 		align-content: flex-end
 	.logout
-		font-size: 14px
+		font-size: 16px
 		font-weight: 300
 		display: inline-block
 		padding: 0 2px

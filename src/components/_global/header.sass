@@ -3,9 +3,10 @@ header
 	width: 100%
 	background-color: #fff
 	z-index: 99
-	top: 0
 	left: 0
 	transition: .3s all ease-in-out
+	@media screen and ( max-width: 1280px)
+		top: 0 !important
 	.banner_header
 		z-index: 10
 		transition: .3s all ease-in-out
@@ -13,7 +14,7 @@ header
 			img
 				width: 100%
 				transition: .3s all ease-in-out
-		@media screen and ( max-width: 1024px)
+		@media screen and ( max-width: 1280px)
 			display: none!important
 	.header_top
 		height: 120px
@@ -22,6 +23,7 @@ header
 		margin-top: 25px
 		@media screen and ( max-width: 1280px )
 			height: 80px
+			margin-top: 0
 		.header_left
 			flex: 1 0 38%
 			@media screen and ( max-width: 1280px )

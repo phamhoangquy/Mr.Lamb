@@ -524,6 +524,8 @@ function scrollFunction() {
     }
 }
 
+
+
 function quantityNumber() {
     $(".qty-minus").click(function() {
         let minus = $(this).parents('.input-group').find('input').val();
