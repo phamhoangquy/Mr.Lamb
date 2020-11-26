@@ -9,7 +9,7 @@
 				<div class="text">Phương thức thanh toán</div>
 			</div>
 			<div class="wrapper-form payment-method-form">
-				<xsl:apply-templates select="Payment"/>
+				<xsl:apply-templates select="Payment" />
 			</div>
 		</div>
 		<div class="checkout-form">
@@ -17,28 +17,29 @@
 				<div class="text">Phương thức giao hàng</div>
 			</div>
 			<div class="wrapper-form shipping-method-form">
-				<xsl:apply-templates select="Shipping"/>
+				<xsl:apply-templates select="Shipping" />
 			</div>
 		</div>
 		<div class="term-service-wrap">
 			<div class="qcheckbox">
-				<input id="payAgree" type="checkbox" name="PaymentAgree"/> 
-				<label>Tôi  đã đọc và đồng ý với <a href="#">Các điều khoản</a></label>
+				<input id="PaymentAgree" type="checkbox" checked="checked" name="PaymentAgree" required="required"
+					aria-required="" />
+				<label>Tôi đã đọc và đồng ý với <a href="#">Các điều khoản</a></label>
 			</div>
 		</div>
 		<div class="form-group">
 			<div class="setting-control">
 				<div class="btn-gap">
-					<a class="btn btn-primary grey" href="/"> 
+					<a class="btn btn-primary grey" href="/">
 						<em class="mdi mdi-reply"></em>
 						<span>Quay lại</span>
-					</a> 
+					</a>
 					<a class="btn btn-primary red" href="#">
 						<xsl:attribute name="onclick">
 							<xsl:text>AjaxCheckout.saveorder(true, '</xsl:text>
-							<xsl:value-of select="NextPageUrl"/>
+							<xsl:value-of select="NextPageUrl" />
 							<xsl:text>');return false;</xsl:text>
-						</xsl:attribute> 
+						</xsl:attribute>
 						<em class="fas fa-shopping-basket"></em>
 						<span>Thanh toán</span>
 					</a>
@@ -46,55 +47,55 @@
 			</div>
 		</div>
 	</xsl:template>
-	
+
 	<xsl:template match="Payment">
 		<div class="qradio">
 			<input type="radio" name="PaymentMethod">
-				<xsl:attribute name="id">
-					<xsl:value-of select="Id"/>
-				</xsl:attribute>
-				<xsl:attribute name="value">
-					<xsl:value-of select="Id"/>
-				</xsl:attribute>
-				<xsl:if test="position()=1">
+			<xsl:attribute name="id">
+				<xsl:value-of select="Id" />
+			</xsl:attribute>
+			<xsl:attribute name="value">
+				<xsl:value-of select="Id" />
+			</xsl:attribute>
+			<xsl:if test="position()=1">
 				<xsl:attribute name="checked">
 					<xsl:text>checked</xsl:text>
 				</xsl:attribute>
 				<xsl:attribute name="value">
-					<xsl:value-of select="Id"/>
+					<xsl:value-of select="Id" />
 				</xsl:attribute>
-				</xsl:if>
+			</xsl:if>
 			</input>
-			<label> 
+			<label>
 				<xsl:attribute name="for">
-					<xsl:value-of select="Id"/>
-				</xsl:attribute> 
-				<xsl:value-of select="Description" disable-output-escaping="yes"/>
+					<xsl:value-of select="Id" />
+				</xsl:attribute>
+				<xsl:value-of select="Description" disable-output-escaping="yes" />
 			</label>
 		</div>
 	</xsl:template>
 
 
-	<xsl:template match="Shipping"> 
+	<xsl:template match="Shipping">
 		<div class="qradio">
 			<input type="radio" name="ShippingMethod" onchange="AjaxCheckout.getshippingtotal(this)">
-				<xsl:if test="position()=1">
-					<xsl:attribute name="checked">
-						<xsl:text>checked</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
-				<xsl:attribute name="value">
-					<xsl:value-of select="Id"/>
+			<xsl:if test="position()=1">
+				<xsl:attribute name="checked">
+					<xsl:text>checked</xsl:text>
 				</xsl:attribute>
-				<xsl:attribute name="id">
-					<xsl:value-of select="Id"/>
-				</xsl:attribute> 
+			</xsl:if>
+			<xsl:attribute name="value">
+				<xsl:value-of select="Id" />
+			</xsl:attribute>
+			<xsl:attribute name="id">
+				<xsl:value-of select="Id" />
+			</xsl:attribute>
 			</input>
 			<label>
 				<xsl:attribute name="for">
-					<xsl:value-of select="Id"/>
+					<xsl:value-of select="Id" />
 				</xsl:attribute>
-				<xsl:value-of select="Title" disable-output-escaping="yes"/>
+				<xsl:value-of select="Title" disable-output-escaping="yes" />
 			</label>
 		</div>
 	</xsl:template>

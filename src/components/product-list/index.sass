@@ -177,11 +177,31 @@
 			border-bottom: 1px solid #999999
 			ul
 				list-style: none
-				.checkbox
-					padding: 10px 0
-					span
-						margin-left: 10px
-	// End Checkbox
+				a
+					display: flex
+					justify-content: flex-start
+					align-items: flex-start
+					padding: 8px 0
+					color: #333333
+					text-decoration: none
+					&:before
+						content: ''
+						font-family: 'Font Awesome 5 Pro'
+						font-size: 16px
+						display: block
+						font-weight: 200
+						width: 16px
+						height: 16px
+						line-height: 16px
+						padding-right: 25px
+						font-weight: 200
+						color: #333333
+					&.active
+						&:before
+							content: '\f14a'
+					&:before
+						content: '\f0c8'
+					
 
 	.block_name_category
 		width: 100%
