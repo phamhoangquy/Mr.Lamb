@@ -1,0 +1,126 @@
+.cart-login 
+	padding-top: 10px
+.checkout-login
+	padding: 100px 0 60px
+
+	.login-form
+		.form-group
+			input
+				width: 100%
+				padding: 0 15px
+				height: 40px
+	.module-title
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase
+		color: #333333
+	.select-group
+		ul
+			list-style-type: none
+			margin-bottom: 30px
+			li
+				margin-bottom: 10px
+				input
+					width: 30px
+				span
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					input
+						width: 30px
+	.frm-btn-reset
+		display: none
+	.captcha
+		margin: 15px 0 0 0 !important
+		display: inline-flex
+		flex-direction: row-reverse
+		img
+			height: 40px !important
+			max-width: auto
+			max-width: 150px
+			@media screen and ( max-width:1200px)
+				max-width: 150px
+				
+		@media screen and(max-width:576px)
+			flex-direction: column-reverse
+	.frm-captcha-input
+		margin-top: 0
+		margin-left: 50px
+		@media screen and ( max-width:576px)
+			margin-left: 0
+			margin-top: 20px
+		label
+			display: none
+		input
+			padding: 0 10px
+			margin-top: 0
+			height: 40px
+			@media screen and ( max-width:1280px)
+				max-width: 200px
+			@media screen and ( max-width:1200px)
+				max-width: 150px
+				
+			@media screen and ( max-width:1024px)
+				max-width: 200px
+				
+			@media (max-width: 767.98px)
+				margin-left: 20px
+			@media (max-width: 576.98px)
+				margin-left: 0
+	.rcRefreshImage
+		position: absolute
+		opacity: 1
+		cursor: pointer
+		height: 30px
+		width: 30px
+		right: -5px
+		top: 5px
+		color: #ffffff
+		z-index: 0
+		font-size: 0
+		&:before
+			font-family: 'Font Awesome 5 Pro'
+			position: absolute
+			top: 0
+			right: 0
+			opacity: 1
+			z-index: 99
+			color: #9d9080
+			font-size: 30px
+			content: "\f2f9"
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			@media screen and ( max-width:576px)
+				height: 50px
+	@media screen and ( max-width:500px )
+		#ctl00_mainContent_ctl05_captcha_ctl00
+			display: none
+	#ctl00_mainContent_ctl02_captcha_ctl01
+		position: relative
+	#ctl00_mainContent_ctl06_btnReset,#ctl00_mainContent_ctl05_captcha_ctl00,#ctl00_mainContent_ctl08_captcha_ctl00,#ctl00_mainContent_ctl07_captcha_ctl00
+		display: none
+	#ctl00_mainContent_ctl06_txtCaptcha
+		margin-left: 10px
+		@media screen and ( max-width: 576px)
+			margin: 0
+			
+	#ctl00_mainContent_ctl06_captcha_CaptchaLinkButton
+		#text
+			display: none
+	.RadCaptcha
+		@media screen and ( max-width:767.5px)
+			margin-left: 0
+		span
+			display: none
+		>div
+			>div
+				display: flex
+				position: relative
+				flex-direction: column-reverse
+				height: 40px !important
+				margin-top: 0
+				margin-bottom: 15px
+				@media (max-width: 767.98px)
+					margin-right: 0
+					width: 180px
