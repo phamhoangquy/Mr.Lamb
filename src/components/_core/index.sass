@@ -323,3 +323,68 @@
 						.price
 							p
 								color: #00415f
+
+.productsearchbox
+	z-index: 90
+	width: 100%
+	.searchinput
+		background: none
+	.suggestsearch
+		background: #ffffff
+		padding: 30px
+		position: absolute
+		top: 120%
+		left: 0
+		right: -50%
+		height: 450px
+		overflow-y: scroll
+		scrollbar-width: thin
+		scrollbar-color: #00415f
+		&::-webkit-scrollbar
+			background: #00415f
+			width: 5px
+		&::-webkit-scrollbar-track
+			-webkit-box-shadow: inset 0 0 6px #b2b2b2
+			background-color: #b2b2b2
+		&::-webkit-scrollbar-thumb
+			background-color: #00415f
+		border-radius: 10px
+		border: 2px solid #00415f
+		.wrap-suggestion
+			text-align: center
+			padding: 0
+			list-style: none
+			max-height: 450px
+			li
+				margin-bottom: 15px
+				a
+					display: flex
+					justify-content: space-between
+					.product-img
+						height: 100%
+						max-height: 100%
+						width: 100px
+						max-width: 100%
+						img
+							width: 100%
+							height: 100%
+							object-fit: contain
+					.prd-info
+						padding: 15px
+						h4
+							color: #D30000
+							font-size: 14px
+						h3
+							font-weight: 300
+							color: #111111
+							-webkit-box-orient: vertical
+							-webkit-line-clamp: 2
+							-o-text-overflow: ellipsis
+							display: -webkit-box
+							overflow: hidden
+							text-overflow: ellipsis
+							font-size: 12px
+						span
+							color: #d30000
+							font-weight: 700
+							font-size: 14px

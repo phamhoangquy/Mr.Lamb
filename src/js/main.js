@@ -296,13 +296,14 @@ function swiperInit() {
                     direction: "vertical"
                 }
             },
+            centeredSlides: true,
             direction: "vertical",
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-            navigation: {
-                nextEl: ".product-thumb-next",
-                prevEl: ".product-thumb-prev"
-            }
+            // navigation: {
+            //     nextEl: ".product-thumb-next",
+            //     prevEl: ".product-thumb-prev"
+            // }
         }
     );
 

@@ -57,3 +57,25 @@ section.promotion_detail
 						.content_news_detail_right
 							.title_news_right
 								a.lcl.lcl-2(href="") Nghịch lý thị trường BĐS: giá
+	
+	.container
+		.block-title
+			.head-title
+				h2 Sản phẩm liên quan
+		.row
+			-for(i=0;i<=7;i++)
+				.col-lg-3
+					.promotion-detail-slide
+						a(href="")
+							.card_img
+								.img.zoom-in
+									img(src="./img/home/product-1/ao-1.png", alt="")
+								.sale
+									img(src="./img/product/sale.png", alt="")
+						.content-product-silde
+							.name_product
+								a(href="") Áo Thun Nam Tay Dài Regular 
+							.price
+								p 400.000 VND
+							.discount
+								p 500.000 VND
