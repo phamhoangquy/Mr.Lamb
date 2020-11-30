@@ -20,10 +20,13 @@ header
 		height: 120px
 		display: flex
 		align-items: center
-		margin-top: 25px
+		padding-top: 10px
+		@media screen and ( max-width: 1400px )
+			padding-top: 20px
 		@media screen and ( max-width: 1280px )
 			height: 80px
-			margin-top: 0
+		@media screen and ( max-width: 576px )
+			padding-top: 0
 		.header_left
 			flex: 1 0 38%
 			@media screen and ( max-width: 1280px )
@@ -33,11 +36,11 @@ header
 			@media screen and ( max-width: 1280px )
 				order: 1
 			a
-				width: 75px
-				height: 75px
+				width: 87px
+				height: 87px
 				img
-					width: 75px
-					height: 75px
+					width: 87px
+					height: 87px
 				@media screen and ( max-width: 1280px )
 					img,svg
 						max-width: 100%
@@ -143,7 +146,7 @@ header
 		display: flex
 		justify-content: space-between
 		align-items: center
-		height: 51px
+		height: 50px
 		@media screen and ( max-width: 1280px )
 			flex-direction: column
 			height: unset
