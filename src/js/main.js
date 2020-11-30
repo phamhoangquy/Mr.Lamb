@@ -301,7 +301,6 @@ function swiperInit() {
                     direction: "vertical"
                 }
             },
-            centeredSlides: true,
             direction: "vertical",
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
