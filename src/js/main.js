@@ -31,6 +31,11 @@ $(document).ready(function () {
 		) {
 			$(".shopping-cart-wrapper").removeClass("open");
 		}
+		if (
+			$(".suggestsearch").has(e.target).length === 0
+		) {
+			$(".suggestsearch").fadeOut();
+		}
 	});
 });
 
