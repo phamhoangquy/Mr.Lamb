@@ -19,13 +19,12 @@
 		// z-index: 10px
 		// margin-bottom: 30px
 		.title-wrapper
-			padding: 5px
+			padding: 7px 15px
 			background: #111111
 			h2
 				color: #ffffff
-				font-size: 20px
-				font-weight: 600
-				text-align: center
+				font-size: 18px
+				font-weight: 500
 				text-transform: uppercase
 			@media screen and(max-width:1025px)
 				h2
@@ -69,10 +68,7 @@
 						font-weight: 700
 						color: #333333
 						text-transform: uppercase
-						&:hover
-							color: #00415f
-						&.active
-							color: #00415f
+					
 				&.drop-down
 					.title
 						a
@@ -92,14 +88,7 @@
 						&:last-child
 							a
 								padding-bottom: 20px
-						&.active
-							a
-								color: #00415f
-								font-weight: 600
-						&:hover
-							a
-								color: #00415f
-								font-weight: 600
+						
 						a
 							transition: .3s all  ease-in-out
 							font-size: 14px
@@ -115,6 +104,7 @@
 								color: #00415f
 							&:hover
 								color: #00415f
+								
 						.title-2
 							display: flex
 							justify-content: space-between
@@ -123,12 +113,14 @@
 							a
 								color: #111111
 								font-size: 1rem
-								&:hover
+							&:hover
+								a
 									color: #00415f
-									font-weight: 600
-								&.active
+									
+							&.active
+								a
 									color: #00415f
-									font-weight: 600
+									
 						.nav-sub-2
 							display: none
 						&.open 
@@ -142,14 +134,7 @@
 						padding: 0 20px
 						a 
 							display: block
-						&:hover
-							a
-								color: #00415f
-								font-weight: 600
-						&.active
-							a
-								color: #00415f
-								font-weight: 600
+						
 	// end mega product
 
 	// Mega Checkbox
@@ -170,6 +155,8 @@
 					font-family: "Montserrat-Medium"
 					font-size: 18px
 					color: #ffffff
+					text-transform: uppercase
+					font-weight: 500
 		.block_nation
 			padding: 0 15px
 			margin-bottom: 30px
