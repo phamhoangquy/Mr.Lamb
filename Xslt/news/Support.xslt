@@ -17,7 +17,10 @@
 	</xsl:template>
 	<xsl:template match="News">
 		<li><a class="togglesupport">
-				<xsl:text>0</xsl:text>
+				<xsl:if test="position() >0 and position() &lt;10">
+					<xsl:text>0</xsl:text>
+				</xsl:if>
+
 				<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
 				<xsl:text>. </xsl:text>
 				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
