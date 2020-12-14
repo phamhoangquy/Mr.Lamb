@@ -350,16 +350,17 @@
 	</xsl:template>
 
 	<xsl:template match="ProductProperties">
-		<div class="description">
-			<xsl:choose>
-				<xsl:when test="FieldType=1">
+		<xsl:choose>
+			<xsl:when test="FieldType=1">
+				<div class="description">
 					<div class="title_description">
 						<p>Màu sắc</p>
 					</div>
 					<div class="content_color product-options">
-						<ul>
+						<div class="color-wrapper">
 							<xsl:apply-templates select="Options" mode="Color"></xsl:apply-templates>
-						</ul>
+						</div>
+
 						<input type="hidden" class="product-option-input">
 						<xsl:attribute name="name">
 							<xsl:text>product_option_</xsl:text>
@@ -370,15 +371,17 @@
 						</xsl:attribute>
 						</input>
 					</div>
-				</xsl:when>
-				<xsl:when test="Title='Kích thước'">
+				</div>
+			</xsl:when>
+			<xsl:when test="Title='Kích thước'">
+				<div class="description">
 					<div class="title_description center">
 						<p>Kích thước</p>
 					</div>
 					<div class="content_size product-options">
-						<ul>
+						<div class="size-wrapper">
 							<xsl:apply-templates select="Options" mode="Size"></xsl:apply-templates>
-						</ul>
+						</div>
 						<input type="hidden" class="product-option-input">
 						<xsl:attribute name="name">
 							<xsl:text>product_option_</xsl:text>
@@ -389,71 +392,59 @@
 						</xsl:attribute>
 						</input>
 					</div>
-				</xsl:when>
-				<xsl:otherwise>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template match="Options" mode="Color">
-		<li style="padding:0px" class="li-option">
+
+		<a class="product-option product-option-color" onclick="AjaxCart.selectproductoption(this);return false;">
+			<xsl:attribute name="href">#</xsl:attribute>
+			<xsl:attribute name="data-name">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="data-id">
+				<xsl:value-of select="OptionId"></xsl:value-of>
+			</xsl:attribute>
 			<xsl:if test="IsActive='true'">
 				<xsl:attribute name="class">
-					<xsl:text>li-option active</xsl:text>
+					<xsl:text>product-option product-option-color active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<a class="product-option product-option-color" onclick="AjaxCart.selectproductoption(this);return false;">
-				<xsl:attribute name="href">#</xsl:attribute>
-				<xsl:attribute name="data-name">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="data-id">
-					<xsl:value-of select="OptionId"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>product-option product-option-color active</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
+			<span>
 				<xsl:attribute name="style">
 					<xsl:text>background:</xsl:text>
 					<xsl:value-of select="Color"></xsl:value-of>
 					<xsl:text>; margin: 0px; display: block; width: 100%; height: 100%;:</xsl:text>
 				</xsl:attribute>
-			</a>
-		</li>
+			</span>
+		</a>
 	</xsl:template>
 
 	<xsl:template match="Options" mode="Size">
-		<li style="padding:0px" class="li-option">
-			<div class="size">
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>size active</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
-				<a class="product-option product-option-size"
-					onclick="AjaxCart.selectproductoption(this);return false;">
-					<xsl:attribute name="href">#</xsl:attribute>
-					<xsl:attribute name="data-name">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="data-id">
-						<xsl:value-of select="OptionId"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:if test="IsActive='true'">
-						<xsl:attribute name="class">
-							<xsl:text>product-option product-option-size active</xsl:text>
-						</xsl:attribute>
-					</xsl:if>
-					<xsl:attribute name="style">
-						<xsl:text>; margin: 0px; display: block; width: 100%; height: 100%;:</xsl:text>
-					</xsl:attribute>
-					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-				</a>
-			</div>
-		</li>
+
+		<a class="product-option product-option-size" onclick="AjaxCart.selectproductoption(this);return false;">
+			<xsl:attribute name="href">#</xsl:attribute>
+			<xsl:attribute name="data-name">
+				<xsl:value-of select="Title"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="data-id">
+				<xsl:value-of select="OptionId"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="class">
+					<xsl:text>product-option product-option-size active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
+			<xsl:attribute name="style">
+				<xsl:text>; margin: 0px; display: block; width: 100%; height: 100%;:</xsl:text>
+			</xsl:attribute>
+			<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+		</a>
+
 	</xsl:template>
 
 </xsl:stylesheet>
