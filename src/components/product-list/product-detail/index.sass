@@ -1,6 +1,7 @@
 .product-detail-page
 	.pagination,.productdetailpager
 		display: none
+	
 	.size-wrapper,.color-wrapper
 		display: flex
 		justify-content: flex-start
@@ -42,6 +43,9 @@
 
 .block_product-detail
 	padding-top: 70px
+	.product-status
+		&.out-of-stock
+			color: #d80303 !important
 	@media screen and ( max-width: 576px )
 		padding-top: 30px
 	.product-attributes

@@ -55,7 +55,7 @@
 			<div class="container">
 				<div class="block-title">
 					<div class="head-title">
-						<h2>Sản phẩm liên quan</h2>
+						<h2>Sản phẩm khuyến mãi </h2>
 					</div>
 				</div>
 				<div class="row">

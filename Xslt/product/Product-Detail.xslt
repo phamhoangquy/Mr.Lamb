@@ -67,7 +67,7 @@
 								<div class="content_status">
 									<xsl:choose>
 										<xsl:when test="OutStock='true'">
-											<p class="product-status">
+											<p class="product-status out-of-stock">
 												Hết hàng
 											</p>
 										</xsl:when>
