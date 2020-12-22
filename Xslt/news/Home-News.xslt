@@ -5,9 +5,6 @@
 
 	<xsl:template match="/">
 		<section class="block_news-event">
-			<xsl:attribute name="setBackground">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
-			</xsl:attribute>
 			<div class="container">
 				<div class="block-title">
 					<div class="head-title">
