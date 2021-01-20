@@ -61,21 +61,19 @@
 				// padding: 20px 40px
 				order: 2
 				width: 100%
-				flex: 0  0 100%
-				margin: 30px 0 30px 0
+				height: 300px
+				flex: 0 0 100%
+				margin-bottom: 30px
 			.swiper-container
 				min-height: 650px
 				height: 100%
 				width: 100%
 				@media screen and(max-width:1025px)
-					margin-top: 20px
 					position: relative
 					min-height: 0
 				@media screen and(max-width:576px)
-					margin-top: 20px
 					position: relative
 					min-height: 0
-					margin-left: -33px
 					margin-bottom: 20px
 				.swiper-wrapper
 					max-height: 450px
@@ -86,12 +84,12 @@
 					height: 25% !important
 					margin-bottom: 15px
 					transition: .3s all ease-in-out
-					height: 100px !important
+					height: auto !important
 					display: flex
 					justify-content: center
 					align-items: center
 					.wrapper
-						height: 100px
+						height: auto
 						width: auto
 						img
 							width: 100%
@@ -99,9 +97,9 @@
 					@media screen and(max-width:1025px)
 						width: 100px
 						margin: 4px
-						height: 100px !important
+						height: auto !important
 						.wrapper
-							height: 100px
+							height: auto
 					&.swiper-slide-thumb-active
 						.wrapper
 							box-shadow: 0px 0px 0px 1px
@@ -114,11 +112,10 @@
 				order: 1
 				flex: 0 0 100%
 				max-width: 100%
+				height: 100%
 				margin: 0
 			.swiper-slide
 				width: 100%
-				// background: #f3f3f3
-				// padding: 2rem
 			.wrapper
 				display: block
 				height: 0
@@ -131,7 +128,6 @@
 					left: 0
 					width: 100%
 					height: 100%
-					object-fit: contain
 	.center
 		display: flex
 		align-items: center
@@ -305,6 +301,10 @@
 					&:hover
 						// background: $azure
 						// color: #ffffff
+					@media screen and ( max-width: 576px)
+						font-size: 12px
+						width: auto
+						padding: 0 10px
 				&.active
 					a
 						color: #ffffff
@@ -551,3 +551,5 @@
 		display: none
 	.global-breadcrumb
 		margin-top: 20px
+		@media screen and ( max-width: 1440px)
+			margin-top: 0
