@@ -10,7 +10,10 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="Group">
+
 		<xsl:if test="GroupId= '9' ">
+
+
 			<div class="block_title_nation">
 				<div class="title_nation">
 					<h2>Quốc gia</h2>
@@ -19,8 +22,12 @@
 			<div class="block_nation">
 				<ul>
 					<xsl:apply-templates select="Option" mode="Default"></xsl:apply-templates>
+
+
+
 				</ul>
 			</div>
+
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="Option" mode="Default">

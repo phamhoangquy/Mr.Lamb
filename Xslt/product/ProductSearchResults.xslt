@@ -49,6 +49,10 @@
 									<div class="hot"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
 									</div>
 								</xsl:if>
+									<xsl:if test="floor(ShowOption div 4) mod 2 = 1">
+										<div class="hot"><img src="/Data/Sites/1/media/img/product/best.png" alt="" />
+										</div>
+									</xsl:if>
 							</div>
 						</xsl:if>
 

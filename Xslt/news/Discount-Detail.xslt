@@ -52,6 +52,17 @@
 					</div>
 				</div>
 			</div>
+			<div class="container">
+				<div class="block-title">
+					<div class="head-title">
+						<h2>Sản phẩm khuyến mãi </h2>
+					</div>
+				</div>
+				<div class="row">
+
+					<xsl:apply-templates select="ProductRelated"></xsl:apply-templates>
+				</div>
+			</div>
 		</section>
 	</xsl:template>
 	<xsl:template match="NewsOther">
@@ -82,6 +93,78 @@
 			</div>
 		</div>
 
+	</xsl:template>
+	<xsl:template match="ProductRelated">
+		<div class="col-lg-3">
+			<div class="promotion-detail-slide">
+
+				<a>
+
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="title">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					<div class="card_img">
+						<div class="img zoom-in">
+
+							<img>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</div>
+						<xsl:if test="ShowOption > 0">
+							<div class="promotion">
+								<xsl:if test="floor(ShowOption div 2) mod 2 = 1">
+									<div class="sale"><img src="/Data/Sites/1/media/img/product/sale.png" alt="" />
+									</div>
+								</xsl:if>
+								<xsl:if test="floor(ShowOption div 1) mod 2 = 1">
+									<div class="hot"><img src="/Data/Sites/1/media/img/product/new.png" alt="" />
+									</div>
+								</xsl:if>
+							</div>
+						</xsl:if>
+
+					</div>
+				</a>
+				<div class="content-product-silde">
+					<div class="name_product">
+
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="Url"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+						</a>
+
+					</div>
+					<xsl:if test="Price !=''">
+						<div class="price">
+							<p>
+								<xsl:value-of disable-output-escaping="yes" select="Price"></xsl:value-of>
+							</p>
+						</div>
+					</xsl:if>
+					<xsl:if test="OldPrice !=''">
+						<div class="discount">
+							<p>
+								<xsl:value-of disable-output-escaping="yes" select="OldPrice"></xsl:value-of>
+							</p>
+						</div>
+					</xsl:if>
+				</div>
+			</div>
+		</div>
 	</xsl:template>
 
 </xsl:stylesheet>

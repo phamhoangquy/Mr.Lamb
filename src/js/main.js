@@ -13,9 +13,12 @@ $(document).ready(function () {
 	mappingMenu();
 	mappingLogin();
 	mappingSearch();
-	quantityNumber();
 	toggleShoppingCart();
 	try {
+        $('.product-options a').on('click',function (){
+            $(this).parent().find('a').removeClass('active')
+             $(this).addClass('active')
+        })
 		$('.block_nation a').on('click', function () {
 			$('.block_nation a').removeClass('active')
 			$(this).addClass('active')
@@ -530,36 +533,12 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        document.querySelector("header").style.top = "-65px";
-    } else {
-        document.querySelector("header").style.top = "0";
-    }
+    // if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    //     document.querySelector("header").style.top = "-65px";
+    // } else {
+    //     document.querySelector("header").style.top = "0";
+    // }
 }
-
-
-
-function quantityNumber() {
-    $(".qty-minus").click(function() {
-        let minus = $(this).parents('.input-group').find('input').val();
-        console.log('top')
-        console.log(minus)
-        if (minus > 0) {
-            $(this).parents('.input-group').find('input').val(minus - 1);
-        } else {
-            $(this).parents('.input-group').find('input').val(0);
-        }
-        AjaxCart.updatecart()
-    });
-    $(".qty-plus").on("click", function() {
-        let plus = Number($(this).parents('.input-group').find('input').val());
-        console.log('bottom')
-        console.log(plus)
-        $(this).parents('.input-group').find('input').val(plus + 1);
-        AjaxCart.updatecart()
-    });
-}
-
 function setBackground() {
     $("[setBackground]").each(function() {
         var background = $(this).attr("setBackground");
