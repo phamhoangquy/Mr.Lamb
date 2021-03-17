@@ -1,45 +1,47 @@
-$(document).ready(function () {
-	swiperInit();
-	toggleSupportClient();
-	sideNavigation();
-	sideNavigation2();
-	tabActive();
-	tabActiveHome();
-	tabActiveHome2();
-	watchMoreDetail();
-	showBackToTop();
-	ZoomImg();
-	DataBG();
-	mappingMenu();
-	mappingLogin();
-	mappingSearch();
-	toggleShoppingCart();
-	try {
-        $('.product-options a').on('click',function (){
+$(document).ready(function() {
+    swiperInit();
+    toggleSupportClient();
+    sideNavigation();
+    sideNavigation2();
+    tabActive();
+    tabActiveHome();
+    tabActiveHome2();
+    watchMoreDetail();
+    showBackToTop();
+    ZoomImg();
+    thumbsSmall();
+    thumbsMain();
+    DataBG();
+    mappingMenu();
+    mappingLogin();
+    mappingSearch();
+    toggleShoppingCart();
+    try {
+        $('.product-options a').on('click', function() {
             $(this).parent().find('a').removeClass('active')
-             $(this).addClass('active')
+            $(this).addClass('active')
         })
-		$('.block_nation a').on('click', function () {
-			$('.block_nation a').removeClass('active')
-			$(this).addClass('active')
-		})
-	} catch (error) {
+        $('.block_nation a').on('click', function() {
+            $('.block_nation a').removeClass('active')
+            $(this).addClass('active')
+        })
+    } catch (error) {
 
-	}
+    }
 
-	$(document).on("click", function (e) {
-		if (
-			$(".shopping-cart-toggle").has(e.target).length === 0 &&
-			$(".shopping-cart-wrapper").has(e.target).length === 0
-		) {
-			$(".shopping-cart-wrapper").removeClass("open");
-		}
-		if (
-			$(".suggestsearch").has(e.target).length === 0
-		) {
-			$(".suggestsearch").fadeOut();
-		}
-	});
+    $(document).on("click", function(e) {
+        if (
+            $(".shopping-cart-toggle").has(e.target).length === 0 &&
+            $(".shopping-cart-wrapper").has(e.target).length === 0
+        ) {
+            $(".shopping-cart-wrapper").removeClass("open");
+        }
+        if (
+            $(".suggestsearch").has(e.target).length === 0
+        ) {
+            $(".suggestsearch").fadeOut();
+        }
+    });
 });
 
 function toggleShoppingCart() {
@@ -279,49 +281,39 @@ function swiperInit() {
             }
         });
     }
-    var productThumbs = new Swiper(
-        ".swiper-product-thumbs  .swiper-container", {
-            spaceBetween: 10,
-            freeMode: false,
-            breakpointsInverse: true,
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    direction: "horizontal",
-                    spaceBetween: 10
-                },
-                576: {
-                    slidesPerView: 3.5,
-                    direction: "horizontal",
-                    spaceBetween: 10
-                },
-                1025: {
-                    slidesPerView: 5,
-                    direction: "vertical"
-                },
-                1440: {
-                    slidesPerView: 5,
-                    direction: "vertical"
-                }
-            },
-            direction: "vertical",
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            // navigation: {
-            //     nextEl: ".product-thumb-next",
-            //     prevEl: ".product-thumb-prev"
-            // }
-        }
-    );
 
-    var productMain = new Swiper(".swiper-product-main .swiper-container", {
+}
+
+function thumbsSmall() {
+    const productThumbs = new Swiper(".swiper-product-thumbs  .swiper-container", {
+        spaceBetween: 10,
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                direction: "horizontal",
+                spaceBetween: 10
+            },
+            576: {
+                slidesPerView: 3.5,
+                direction: "horizontal",
+                spaceBetween: 10
+            },
+            1025: {
+                slidesPerView: 5,
+                direction: "vertical"
+            },
+            1440: {
+                slidesPerView: 5,
+                direction: "vertical"
+            }
+        },
+        direction: "vertical",
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    const productMain = new Swiper(".swiper-product-main .swiper-container", {
         slidesPerView: 1,
         centeredSlides: true,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
-        speed: 750,
         loop: false,
         thumbs: {
             swiper: productThumbs
@@ -329,24 +321,23 @@ function swiperInit() {
     });
 }
 
+
 function ZoomImg() {
     if ($(window).width() > 1024) {
-        $(".swiper-slide-active .zoom-img").ezPlus({
-            gallery: "gallery_01",
-            cursor: "pointer",
+        $(".block_product-detail .swiper-product-main img").ezPlus({
+            cursor: 'pointer',
             easing: 'true',
-            galleryActiveClass: "active",
+            galleryActiveClass: 'active',
             imageCrossfade: true,
-            loadingIcon: "http://www.elevateweb.co.uk/spinner.gif",
+            loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif',
             zoomWindowWidth: "500",
             zoomWindowHeight: "500",
             borderSize: "1",
-            borderColour: "#ff4900",
+            borderColour: "#000",
             zoomWindowFadeIn: 500,
             zoomWindowFadeOut: 500,
             lensFadeIn: 500,
             lensFadeOut: 500,
-            lensSize: 200
         });
     }
 }
@@ -539,6 +530,7 @@ function scrollFunction() {
     //     document.querySelector("header").style.top = "0";
     // }
 }
+
 function setBackground() {
     $("[setBackground]").each(function() {
         var background = $(this).attr("setBackground");
