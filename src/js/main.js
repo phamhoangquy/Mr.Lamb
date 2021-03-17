@@ -10,7 +10,6 @@ $(document).ready(function() {
     showBackToTop();
     ZoomImg();
     thumbsSmall();
-    thumbsMain();
     DataBG();
     mappingMenu();
     mappingLogin();
@@ -285,7 +284,7 @@ function swiperInit() {
 }
 
 function thumbsSmall() {
-    const productThumbs = new Swiper(".swiper-product-thumbs  .swiper-container", {
+    var productThumbs = new Swiper(".swiper-product-thumbs .swiper-container", {
         spaceBetween: 10,
         breakpoints: {
             320: {
@@ -311,33 +310,45 @@ function thumbsSmall() {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
     });
-    const productMain = new Swiper(".swiper-product-main .swiper-container", {
+    var productMain = new Swiper(".swiper-product-main .swiper-container", {
         slidesPerView: 1,
         centeredSlides: true,
-        loop: false,
+        effect: "fade",
+        bserver: true,
+        observeParents: true,
+        fadeEffect: {
+            crossFade: true
+        },
         thumbs: {
             swiper: productThumbs
-        }
+        },
+        on: {
+            slideChangeTransitionEnd: function() {
+                ZoomImg();
+            },
+        },
     });
-}
 
+}
 
 function ZoomImg() {
     if ($(window).width() > 1024) {
-        $(".block_product-detail .swiper-product-main img").ezPlus({
-            cursor: 'pointer',
+        $(".swiper-slide-active .zoom-img").ezPlus({
+            gallery: "gallery_01",
+            cursor: "pointer",
             easing: 'true',
-            galleryActiveClass: 'active',
+            galleryActiveClass: "active",
             imageCrossfade: true,
-            loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif',
+            loadingIcon: "http://www.elevateweb.co.uk/spinner.gif",
             zoomWindowWidth: "500",
             zoomWindowHeight: "500",
             borderSize: "1",
-            borderColour: "#000",
+            borderColour: "#ff4900",
             zoomWindowFadeIn: 500,
             zoomWindowFadeOut: 500,
             lensFadeIn: 500,
             lensFadeOut: 500,
+            lensSize: 200
         });
     }
 }
