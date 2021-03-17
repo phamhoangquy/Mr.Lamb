@@ -9,7 +9,6 @@ $(document).ready(function() {
     watchMoreDetail();
     showBackToTop();
     ZoomImg();
-    thumbsSmall();
     DataBG();
     mappingMenu();
     mappingLogin();
@@ -42,6 +41,81 @@ $(document).ready(function() {
         }
     });
 });
+
+// slide thumbs
+var productThumbs = new Swiper(".swiper-product-thumbs  .swiper-container", {
+    spaceBetween: 10,
+    freeMode: false,
+    breakpointsInverse: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            direction: "horizontal",
+            spaceBetween: 10
+        },
+        576: {
+            slidesPerView: 3.5,
+            direction: "horizontal",
+            spaceBetween: 10
+        },
+        1025: {
+            slidesPerView: 5,
+            direction: "vertical"
+        },
+        1440: {
+            slidesPerView: 5,
+            direction: "vertical"
+        }
+    },
+    direction: "vertical",
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    // navigation: {
+    //     nextEl: ".product-thumb-next",
+    //     prevEl: ".product-thumb-prev"
+    // }
+});
+
+var productMain = new Swiper(".swiper-product-main .swiper-container", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true
+    },
+    thumbs: {
+        swiper: productThumbs
+    },
+    on: {
+        slideChangeTransitionEnd: function() {
+            ZoomImg();
+        },
+    },
+
+});
+
+function ZoomImg() {
+    if ($(window).width() > 1024) {
+        $(".swiper-slide-active .zoom-img").ezPlus({
+            gallery: "gallery_01",
+            cursor: "pointer",
+            easing: 'true',
+            galleryActiveClass: "active",
+            imageCrossfade: true,
+            loadingIcon: "http://www.elevateweb.co.uk/spinner.gif",
+            zoomWindowWidth: "500",
+            zoomWindowHeight: "500",
+            borderSize: "1",
+            borderColour: "#ff4900",
+            zoomWindowFadeIn: 500,
+            zoomWindowFadeOut: 500,
+            lensFadeIn: 500,
+            lensFadeOut: 500,
+            lensSize: 200
+        });
+    }
+}
+// End thumbs
 
 function toggleShoppingCart() {
     $(".cart-header").on("click", function(e) {
@@ -278,77 +352,6 @@ function swiperInit() {
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
             }
-        });
-    }
-
-}
-
-function thumbsSmall() {
-    var productThumbs = new Swiper(".swiper-product-thumbs .swiper-container", {
-        spaceBetween: 10,
-        breakpoints: {
-            320: {
-                slidesPerView: 2,
-                direction: "horizontal",
-                spaceBetween: 10
-            },
-            576: {
-                slidesPerView: 3.5,
-                direction: "horizontal",
-                spaceBetween: 10
-            },
-            1025: {
-                slidesPerView: 5,
-                direction: "vertical"
-            },
-            1440: {
-                slidesPerView: 5,
-                direction: "vertical"
-            }
-        },
-        direction: "vertical",
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-    });
-    var productMain = new Swiper(".swiper-product-main .swiper-container", {
-        slidesPerView: 1,
-        centeredSlides: true,
-        effect: "fade",
-        bserver: true,
-        observeParents: true,
-        fadeEffect: {
-            crossFade: true
-        },
-        thumbs: {
-            swiper: productThumbs
-        },
-        on: {
-            slideChangeTransitionEnd: function() {
-                ZoomImg();
-            },
-        },
-    });
-
-}
-
-function ZoomImg() {
-    if ($(window).width() > 1024) {
-        $(".swiper-slide-active .zoom-img").ezPlus({
-            gallery: "gallery_01",
-            cursor: "pointer",
-            easing: 'true',
-            galleryActiveClass: "active",
-            imageCrossfade: true,
-            loadingIcon: "http://www.elevateweb.co.uk/spinner.gif",
-            zoomWindowWidth: "500",
-            zoomWindowHeight: "500",
-            borderSize: "1",
-            borderColour: "#ff4900",
-            zoomWindowFadeIn: 500,
-            zoomWindowFadeOut: 500,
-            lensFadeIn: 500,
-            lensFadeOut: 500,
-            lensSize: 200
         });
     }
 }
